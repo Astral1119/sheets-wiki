@@ -1,9 +1,12 @@
 ---
 title: Zero Elements
-date: 2024-04-01T02:25:25.281Z
+description: Testing
+author: Astral Café
+date: 2024-04-01
 tags:
-  - Tags
+  - left
 ---
+
 Zero elements are values that, when used in an array, have no width and/or height.
 
 # Syntax

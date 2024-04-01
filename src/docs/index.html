@@ -1,41 +1,55 @@
 ---
-layout: blog
+layout: default
 ---
+<div class="container max-w-3xl mt-6 px-6">
 
-<section class="mt-15">
-    {% set postslist = collections.post %}
+    <h1 class="font-bold text-5xl">Documentation</h1>
 
-    {% for post in postslist | reverse %}
-        <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
-                <a href="{{ post.url | url }}">
-                    {% if post.data.title %}
-                        {{ post.data.title }}
-                    {% else %}
-                        Untitled
-                    {% endif %}
-                </a>
-            </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
+    <!-- THIS SECTION IS FOR SEARCH -->
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <div id="search"></div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
 
-                </time>
-            </p>
-            {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
-                    {{ post.data.description }}
+    <section class="mt-15">
+        {% set docslist = collections.doc %}
+
+        {% for doc in docslist | reverse %}
+            <article class="my-8">
+                <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                    <a href="{{ doc.url | url }}">
+                        {% if doc.data.title %}
+                            {{ doc.data.title }}
+                        {% else %}
+                            Untitled
+                        {% endif %}
+                    </a>
+                </h2>
+                <p class="text-base leading-6 text-gray-500 mb-3">
+                    <time>
+                        {{ doc.date | readableDate }}
+                        by
+                        <a>{{ doc.data.author }}</a>
+
+                    </time>
                 </p>
-            {% endif %}
+                {% if doc.data.description %}
+                    <p class="text-lg text-gray-500 mb-3">
+                        {{ doc.data.description }}
+                    </p>
+                {% endif %}
 
-            <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    Read more →
-                </a>
-            </p>
+                <p>
+                    <a href="{{ doc.url | url }}" class="text-indigo-500 font-bold text-lg">
+                        Read more →
+                    </a>
+                </p>
 
-        </article>
-    {% endfor %}
-</section>
+            </article>
+        {% endfor %}
+    </section>
+</div>

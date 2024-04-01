@@ -28,7 +28,7 @@ site_url: https://sheets.wiki
 collections:
   - label: "Docs"
     name: "docs"
-    folder: "src/docs/_posts"
+    folder: "src/docs/posts"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -43,7 +43,7 @@ collections:
 
   - label: "Blog"
     name: "blog"
-    folder: "src/posts"
+    folder: "src/blog/posts"
     create: true
     editor:
       preview: false
