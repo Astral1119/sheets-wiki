@@ -35,7 +35,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Permalink (/permalink/)", name: "permalink", widget: "string" }
+      - { label: "Permalink (/permalink/)", name: "permalink", widget: "string", pattern: ['/[\w-\d]+/', "Must begin and end with / and only contain numbers, letters, and hyphens"] }
       - widget: select
         label: "tags"
         name: "tags"
