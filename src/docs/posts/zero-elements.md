@@ -1,6 +1,6 @@
 ---
 title: Zero Elements
-description: Testing
+description: Elements with no height or width can be useful in array construction.
 author: Astral Café
 date: 2024-04-01
 tags:
