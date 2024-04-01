@@ -32,6 +32,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Permalink (/permalink/)", name: "permalink", widget: "string" }
@@ -40,7 +41,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["function", "technique", "data-type"]
 
   - label: "Blog"
     name: "blog"
@@ -59,4 +60,4 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["algorithm", "game", "tutorial"]
