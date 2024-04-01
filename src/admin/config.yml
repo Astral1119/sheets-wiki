@@ -28,18 +28,18 @@ site_url: https://sheets.wiki
 collections:
   - label: "Docs"
     name: "docs"
-    folder: "src/docs"
+    folder: "src/docs/_posts"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
-          label: "tags"
-          name: "tags"
-          multiple: true
-          create: true
-          options: ["Tags", "created", "from", "config.yml"]
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
 
   - label: "Blog"
     name: "blog"
