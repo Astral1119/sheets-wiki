@@ -5,6 +5,7 @@ author: Astral Café
 date: 2024-04-01
 tags:
   - left
+permalink: /zero-elements/
 ---
 
 Zero elements are values that, when used in an array, have no width and/or height.
