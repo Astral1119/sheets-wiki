@@ -64,11 +64,10 @@ While this doesn't look as nice, it's infinitely more easier to do something lik
  WHERE A >= date '2024-04-01' and A <= date '2024-04-07'")
 ``` 
 This formula easily calculates the sum for the week or any date range you specify.
-  
-  or
 ```haskell
 =QUERY(A:C,"SELECT Sum(C) WHERE B ='Food'")
 ```
+For more information see [[QUERY]]
 and
 ```haskell
 =SUM(FILTER(C:C,B:B="Food"))
