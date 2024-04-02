@@ -68,7 +68,7 @@ This formula easily calculates the sum for the week or any date range you specif
 ```haskell
 =QUERY(A:C,"SELECT Sum(C) WHERE B ='Food'")
 ```
-For more information see [[Query]]
+For more information see [[query]]
 and
 ```haskell
 =SUM(FILTER(C:C,B:B="Food"))
