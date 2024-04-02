@@ -59,17 +59,17 @@ This is an example of a data structure that would be fine to use if you're only 
 |Entries|
 
 While this doesn't look as nice, it's infinitely more easier to do something like
-```
+```haskell
 =QUERY(A:C,"SELECT Sum(C) WHERE A >= date '2024-04-01' and A <= date '2024-04-07'")
 ``` 
 This formula easily calculates the sum for the week or any date range you specify.
   
   or
-```
+```haskell
     =QUERY(A:C,"SELECT B,Sum(C) WHERE B ='Food'")
 ```
 and
-```
+```haskell
     =SUM(FILTER(C:C,B:B="Food"))
 ```    
 Which would give you all the totals for how much you spent on food. You could even combine them!
