@@ -35,6 +35,9 @@ function getAnchorLink(filePath, linkTitle) {
 }
 
 function getAnchorAttributes(filePath, linkTitle) {
+  // Define the directories to search in
+  const directories = ['docs/posts', 'blog/posts'];
+
   let fileName = filePath.replaceAll("&amp;", "&");
   let header = "";
   let headerLinkPath = "";
@@ -46,28 +49,20 @@ function getAnchorAttributes(filePath, linkTitle) {
   let noteIcon = process.env.NOTE_ICON_DEFAULT;
   const title = linkTitle ? linkTitle : fileName;
   let permalink = `/${slugify(filePath)}`;
-  let deadLink = false;
-  try {
-    const startPath = "./src/";
-    const fullPath = fileName.endsWith(".md")
-      ? `${startPath}${fileName}`
-      : `${startPath}${fileName}.md`;
-    const file = fs.readFileSync(fullPath, "utf8");
-    const frontMatter = matter(file);
-    if (frontMatter.data.permalink) {
-      permalink = frontMatter.data.permalink;
+  let deadLink = true;
+  let fileContent;
+
+  // Loop through each directory and try to read the file
+  for (const directory of directories) {
+    try {
+      const fullPath = `./src/${directory}/${fileName.endsWith(".md") ? fileName : `${fileName}.md`}`;
+      fileContent = fs.readFileSync(fullPath, "utf8");
+      deadLink = false;
+      break; // Exit the loop if a valid file is found
+    } catch (error) {
+      // File not found in this directory, continue to the next one
+      continue;
     }
-    if (
-      frontMatter.data.tags &&
-      frontMatter.data.tags.indexOf("gardenEntry") != -1
-    ) {
-      permalink = "/";
-    }
-    if (frontMatter.data.noteIcon) {
-      noteIcon = frontMatter.data.noteIcon;
-    }
-  } catch {
-    deadLink = true;
   }
 
   if (deadLink) {
@@ -80,6 +75,15 @@ function getAnchorAttributes(filePath, linkTitle) {
       innerHTML: title,
     }
   }
+
+  const frontMatter = matter(fileContent);
+  if (frontMatter.data.permalink) {
+    permalink = frontMatter.data.permalink;
+  }
+  if (frontMatter.data.noteIcon) {
+    noteIcon = frontMatter.data.noteIcon;
+  }
+
   return {
     attributes: {
       "class": "internal-link",
@@ -88,8 +92,9 @@ function getAnchorAttributes(filePath, linkTitle) {
       "href": `${permalink}${headerLinkPath}`,
     },
     innerHTML: title,
-  }
+  };
 }
+
 
 // This will be used for tag functions later on.
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;

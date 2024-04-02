@@ -35,7 +35,7 @@ Here's the mathematical definition Wikipedia provides:
 
 Now, I'm a high schooler who was never formally taught any of this stuff. It also doesn't help that very little of it is analogous to Google Sheets formulae. But I came across a very nice [Medium article by Ethan Nam](https://medium.com/@ethannam/understanding-the-levenshtein-distance-equation-for-beginners-c4285a5604f0) that helped illustrate the concept. I highly recommend giving it a read.
 
-Anyways, I opted for a matrix implementation. However, we only really need to account for the last matrix row we calculated. Let's call it **previous**. We also need to keep track of a **source** and **target** string, as well as the **current** index in the source string.
+Anyways, I opted for a matrix implementation using [[arrays|arrays]]. However, we only really need to account for the last matrix row we calculated. Let's call it **previous**. We also need to keep track of a **source** and **target** string, as well as the **current** index in the source string.
 As per the algorithm, we start by initializing **previous**. That sounds kind of fancy, but really it just means assigning a number to each letter in **target** and tacking a 0 to the beginning of that. So, if our target is "act", the initialized **previous** row looks like this:
 
 |       | a     | c     | t     |
