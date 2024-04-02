@@ -8,7 +8,7 @@ tags:
 permalink: /zero-elements/
 ---
 
-Zero elements are values that, when used in an array, have no width and/or height.
+Zero elements are values that, when used in [[arrays]], have no width and/or height.
 
 # Syntax
 

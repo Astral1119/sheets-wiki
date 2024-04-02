@@ -4,6 +4,15 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
+
+  // Backlinks, Wikilinks, etc.
+  eleventyConfig.addPlugin(
+    require('@photogabble/eleventy-plugin-interlinker'),
+    {
+      // defaultLayout: 'layouts/embed.liquid'
+    }
+  );
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
