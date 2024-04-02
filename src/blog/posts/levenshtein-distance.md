@@ -39,7 +39,7 @@ Anyways, I opted for a matrix implementation. However, we only really need to ac
 As per the algorithm, we start by initializing **previous**. That sounds kind of fancy, but really it just means assigning a number to each letter in **target** and tacking a 0 to the beginning of that. So, if our target is "act", the initialized **previous** row looks like this:
 
 |       | a     | c     | t     |
-| ----- | ----- | ----- | ----- |
+|:-----:|:-----:|:-----:|:-----:|
 | **0** | **1** | **2** | **3** |
 
 Awesome. Now, we need to iterate it. An iteration can be described in a couple steps:
@@ -53,7 +53,7 @@ Awesome. Now, we need to iterate it. An iteration can be described in a couple s
 For example, take the first iteration. For convenience, I've also gone ahead and added numbers to refer to each spot with in the first row and column. I'll refer to each spot as (row,column).
 
 |     |     | 1   | 2   | 3   | 4   |
-| --- | --- | --- | --- | --- | --- |
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |     |     |     | a   | c   | t   |
 |     |     | 0   | 1   | 2   | 3   |
 | 1   | c   |     |     |     |     |
@@ -64,7 +64,7 @@ For example, take the first iteration. For convenience, I've also gone ahead and
 We start by taking our three values for (1,1). There's only one valid value, 0, and we add one to it to get 1.
 
 |     |     | 1   | 2   | 3   | 4   |
-| --- | --- | --- | --- | --- | --- |
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |     |     |     | a   | c   | t   |
 |     |     | 0   | 1   | 2   | 3   |
 | 1   | c   | 1   |     |     |     |
@@ -81,7 +81,7 @@ Now, we look at (1,2). If you recall the five steps I outlined above:
 5. The minimum of 2, 2, and 1 is 1, so our new value is 1.
 
 |     |     | 1   | 2   | 3   | 4   |
-| --- | --- | --- | --- | --- | --- |
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |     |     |     | a   | c   | t   |
 |     |     | 0   | 1   | 2   | 3   |
 | 1   | c   | 1   | 1   |     |     |
@@ -98,7 +98,7 @@ Now, we look at (1,2). If you recall the five steps I outlined above:
 This process continues on for each letter in **source**.
 
 |     |     | 1   | 2   | 3   | 4   |
-| --- | --- | --- | --- | --- | --- |
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |     |     |     | a   | c   | t   |
 |     |     | 0   | 1   | 2   | 3   |
 | 1   | c   | 1   | 1   | 1   | 2   |
@@ -190,7 +190,9 @@ This is the formula I developed. For readability, I've beautified it and redefin
 
 It looks a bit intimidating when it's all spaced out like this, in my opinion, so here it is compressed.
 
-`=let(source,"chat",target,"act",index(reduce({0,sequence(1,len(target))},sequence(len(source)),lambda(previous,current,scan(#N/A,sequence(1,len(target)+1),lambda(left,n,min(index(previous,n)+1,ifna(left+1),iferror(index(previous,n-1)+not(exact(mid(source,current,1),mid(target,n-1,1))))))))),len(target)+1))`
+```haskell
+=let(source,"chat",target,"act",index(reduce({0,sequence(1,len(target))},sequence(len(source)),lambda(previous,current,scan(#N/A,sequence(1,len(target)+1),lambda(left,n,min(index(previous,n)+1,ifna(left+1),iferror(index(previous,n-1)+not(exact(mid(source,current,1),mid(target,n-1,1))))))))),len(target)+1))
+```
 
 ### Explanation
 
