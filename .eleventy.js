@@ -47,7 +47,6 @@ function getAnchorAttributes(filePath, linkTitle) {
   }
 
   let noteIcon = process.env.NOTE_ICON_DEFAULT;
-  const title = linkTitle ? linkTitle : fileName;
   let permalink = `/${slugify(filePath)}`;
   let deadLink = true;
   let fileContent;
@@ -72,7 +71,7 @@ function getAnchorAttributes(filePath, linkTitle) {
         "href": "/404",
         "target": "",
       },
-      innerHTML: title,
+      innerHTML: linkTitle,
     }
   }
 
@@ -91,7 +90,7 @@ function getAnchorAttributes(filePath, linkTitle) {
       "data-note-icon": noteIcon,
       "href": `${permalink}${headerLinkPath}`,
     },
-    innerHTML: title,
+    innerHTML: linkTitle,
   };
 }
 
