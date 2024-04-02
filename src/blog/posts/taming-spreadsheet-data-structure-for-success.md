@@ -69,7 +69,7 @@ This formula easily calculates the sum for the week or any date range you specif
 =QUERY(A:C,"SELECT Sum(C) WHERE B ='Food'")
 ```
 
-For more information see [\[[query]]](https://sheets.wiki/query/)
+For more information see \[[query]]
 and
 
 ```haskell
