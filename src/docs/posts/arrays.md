@@ -6,6 +6,7 @@ date: 2024-04-01
 tags:
   - left
 permalink: /arrays/
+short: Arrays
 ---
 Arrays are any *m* by *n* grid of contiguous values where *m* is the number of rows and *n* is the number of columns in the array. Within an array, one can have any other kind of data type, including multiple different types. You can also think of arrays as a collection of cells arranged into a rectangle.
 

@@ -6,6 +6,7 @@ date: 2024-04-01
 tags:
   - tutorial
 permalink: /color-follows-data/
+short: Color Follows Data
 ---
 "How can I add up all the cells with a red background?"
 

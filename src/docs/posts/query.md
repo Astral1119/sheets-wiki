@@ -4,6 +4,7 @@ description: The QUERY function performs SQL-lite queries using the Google
   Visualization API Query Language.
 date: 2024-04-02T19:23:17.740Z
 permalink: /query/
+short: Query
 tags:
   - function
 ---

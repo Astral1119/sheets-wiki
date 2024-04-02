@@ -6,6 +6,7 @@ date: 2024-04-01
 tags:
   - left
 permalink: /zero-elements/
+short: Zero Elements
 ---
 
 Zero elements are values that, when used in [[arrays|arrays]], have no width and/or height.
