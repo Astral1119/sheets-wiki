@@ -35,10 +35,10 @@ collections:
     editor:
       preview: false
     slug: "{{short | slugify}}"
-    preview_path: {{slug}}
+    preview_path: "{{slug}}"
     summary: "{{short}} - {{commit_date}} - {{commit_author}} - "
     sortable_fields: ['commit_date', 'short', 'commit_author']
-    
+
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Title", name: "short", widget: "string" }
