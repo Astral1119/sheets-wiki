@@ -36,7 +36,6 @@ collections:
       preview: false
     slug: "{{short | slugify}}"
     preview_path: "{{slug}}"
-    summary: "{{short}} - {{commit_date}} - {{commit_author}} - "
     sortable_fields: ['commit_date', 'short', 'commit_author']
 
     fields:
