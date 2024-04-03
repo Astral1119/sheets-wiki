@@ -3,7 +3,6 @@ title: Unstable
 short: Unstable
 description: A set of techniques that produce non-hardcoded values.
 date: 2024-04-02T22:48:57.110Z
-permalink: /unstable/
 tags:
   - technique
 ---
