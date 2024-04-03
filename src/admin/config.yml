@@ -51,7 +51,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["function", "technique", "data-type"]
+        options: ["function", "technique", "data-type", "terminology"]
 
   - label: "Blog"
     name: "blog"
@@ -71,4 +71,4 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["algorithm", "game", "tutorial"]
+        options: ["algorithm", "game", "tutorial", "advice"]
