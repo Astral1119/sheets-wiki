@@ -517,6 +517,9 @@ module.exports = function (eleventyConfig) {
   // Optimizing SEO
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
+  // Optimizing SEO
+  eleventyConfig.addPassthroughCopy("./src/_headers");
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
