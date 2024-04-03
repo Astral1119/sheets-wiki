@@ -70,6 +70,7 @@ This formula easily calculates the sum for the week or any date range you specif
 ```
 
 For more information see \[[query]]
+
 and
 
 ```haskell
@@ -79,3 +80,21 @@ and
 Which would give you all the totals for how much you spent on food. You could even combine them!
 
 This structure allows you to track weeks, months, or years and allows you to easily find the data you're looking for without looking through many sheets. It also prevents complex formulas or creating arrays of multiple different sections and changing it every week to include that week.
+
+Let's take a look at another example.
+
+| A                | B             | C         | D          | E          |
+| ---------------- | ------------- | --------- | ---------- | ---------- |
+| PO               |   Customer    | Item      |  Quantity  | Date       |
+| 123456           | ABC Company   |   Water   |   1        | 4/1/2024   |
+| 123456           | ABC Company   |   Meat    |   2        | 4/1/2024   |
+| 123456           | ABC Company   | Vegetables|   2        | 4/1/2024   |
+| 567891           | DEF Company   |   Bread   |   4        | 4/3/2024   |
+| 567891           | DEF Company   |   Salad   |   5        | 4/3/2024   |
+| 567891           | DEF Company   |   Soda    |   8        | 4/3/2024   |
+| 567891           | DEF Company   | Container |   9        | 4/3/2024   |
+| 234567           | ABC Company   |   Water   |   1        | 4/5/2024   |
+
+While this might seem like extra work upfront, this structure allows you to easily filter by various criteria, such as specific companies or items, to see how much stock you have on hand, or other important information you may be looking for such as "How much Meat did we buy from ABC company last month?" can be answered with a simple Filter or \[[query]].
+
+By prioritizing a well-organized structure from the beginning, you'll empower yourself to get the most out of your spreadsheets!
