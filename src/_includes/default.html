@@ -15,6 +15,9 @@
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+    {% if noindex != true %}
+        <meta name="robots" content="index">
+    {% endif %}
   </head>
   <body>
     {% include "./partials/navbar.html" %}
