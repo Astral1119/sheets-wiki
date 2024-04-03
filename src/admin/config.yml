@@ -24,20 +24,29 @@ media_folder: "src/static/img"
 public_folder: "/static/img"
 
 site_url: https://sheets.wiki
+display_url: https://sheets.wiki
+logo_url: https://sheets.wiki/static/img/icon.svg
 
 collections:
   - label: "Docs"
     name: "docs"
     folder: "src/docs/posts"
     create: true
+    editor:
+      preview: false
     slug: "{{short | slugify}}"
+    preview_path: {{slug}}
+    summary: "{{short}} - {{commit_date}} - {{commit_author}} - "
+    sortable_fields: ['commit_date', 'short', 'commit_author']
+    
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Title", name: "short", widget: "string" }
+      - { label: "Permalink (/permalink/)", name: "permalink", widget: "string", pattern: ['/[\w-\d]+/', "Must begin and end with / and only contain numbers, letters, and hyphens"] }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Permalink (/permalink/)", name: "permalink", widget: "string", pattern: ['/[\w-\d]+/', "Must begin and end with / and only contain numbers, letters, and hyphens"] }
+     
       - widget: select
         label: "tags"
         name: "tags"
@@ -51,6 +60,7 @@ collections:
     create: true
     editor:
       preview: false
+    preview_path: blog/posts/{{slug}}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
