@@ -514,7 +514,7 @@ module.exports = function (eleventyConfig) {
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
-  
+  eleventyConfig.addPassthroughCopy({ "_headers": "_headers" });
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
