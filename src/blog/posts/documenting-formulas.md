@@ -44,7 +44,7 @@ purpose,"This formula is for calculating the sum of all the apples",
 range_to_sum,B1:B10,
 items,A1:A10,
 apples,Filter(range_to_sum,items="apples"),
-SUM(apples)
+SUM(apples))
 ```
 
 As you can see I never use the purpose variable but within the formula itself it serves as a comment line for yourself or whomever comes in wondering what the formula does.
