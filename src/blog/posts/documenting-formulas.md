@@ -12,9 +12,12 @@ As such we have a pseudo-documentation method using Let()
 
 LET(name1, value_expression1, [name2, …], [value_expression2, …], formula_expression)
 
-|A|B|
-|1|-|
-|2|-|
+
+| A                | B             | C         |
+| ---------------- | ------------- | --------- |
+| 1 ||||
+| 2 ||||
+
 
 ```haskell
 =Let(
