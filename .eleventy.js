@@ -520,6 +520,23 @@ module.exports = function (eleventyConfig) {
   // Optimizing SEO
   eleventyConfig.addPassthroughCopy("./src/_headers");
 
+  // Add aliasing, courtesy of Boehs
+  eleventyConfig.addCollection("redirects", function (collectionApi) {
+    // lets make a variable to hold our redirects
+    let redirects = [];
+    // We need to get each post in our posts folder. In my case this is /node
+    const nodes = collectionApi.getFilteredByGlob("src/*/posts/*.md");
+    // next lets iterate over all the nodes
+    nodes.forEach(node =>
+      // for each alias
+      (node.data.aliases || []).forEach(alias =>
+        // push the target url and the old url
+        redirects.push([node.data.page.url,node.data.page.url.replace(/\/[^\/]*?(\..+)?$/, `/${alias}$1`)])
+      )
+    )
+    return redirects
+  })
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

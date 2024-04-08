@@ -1,0 +1,41 @@
+---
+layout: blog
+---
+
+<section class="mt-15">
+    {% set namedlist = collections.named %}
+
+    {% for named in namedlist | reverse %}
+        <article class="my-8">
+            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                <a href="{{ named.url | url }}">
+                    {% if named.data.title %}
+                        {{ named.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            <p class="text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ named.date | readableDate }}
+                    by
+                    <a>{{ named.data.author }}</a>
+
+                </time>
+            </p>
+            {% if named.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ named.data.description }}
+                </p>
+            {% endif %}
+
+            <p>
+                <a href="{{ named.url | url }}" class="text-indigo-500 font-bold text-lg">
+                    Read more →
+                </a>
+            </p>
+
+        </article>
+    {% endfor %}
+</section>

@@ -6,3 +6,5 @@ items:
     url: "/docs"
   - text: Blog
     url: "/blog"
+  - text: "Named Functions"
+    url: "/named-functions"
