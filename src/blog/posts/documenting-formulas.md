@@ -30,7 +30,7 @@ interest_rate,.13,
 loan,A1,
 loan*interest_rate)
 ```
-Allowing you to know what A1 is, letting you know the .13 in the formula is your interest_rate.
+Allowing you to know what A1 is and letting you know the .13 in the formula is your interest_rate.
 
 Another interesting thing of note you can accomplish with Let() is you don't NEED to use the variable names at the end.
 
