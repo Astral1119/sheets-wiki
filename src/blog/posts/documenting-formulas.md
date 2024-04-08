@@ -47,4 +47,4 @@ apples,Filter(range_to_sum,items="apples"),
 SUM(apples))
 ```
 
-As you can see I never use the purpose variable but within the formula itself it serves as a comment line for yourself or whomever comes in wondering what the formula does.
+As you can see the 'purpose' variable never gets used but within the formula itself it serves as a comment line for yourself or whomever comes in wondering what the formula does you can add as many or as little of these as you need.
