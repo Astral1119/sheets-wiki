@@ -6,7 +6,7 @@ date: 2024-04-08T18:03:32.861Z
 tags:
   - advice
 ---
-As sheets doesn't have an official way to comment within formulas yet we're often wondering how to document our formulas or add comments for our co-workers or our future self to remember what the formula does or even what it's pointing to.
+As sheets doesn't have an official way to comment within formulas yet, we're often wondering how to document our formulas or add comments for our co-workers or our future self to remember what the formula does or even what it's pointing to.
 
 As such we have a pseudo-documentation method using Let()
 
