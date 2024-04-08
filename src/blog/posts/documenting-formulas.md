@@ -22,7 +22,7 @@ LET(name1, value_expression1, [name2, …], [value_expression2, …], formula_ex
 ```haskell
 =Let(
 data,A1:A2,
-sum(data)
+sum(data))
 ```
 will output 3.
 
