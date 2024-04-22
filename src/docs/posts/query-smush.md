@@ -20,4 +20,8 @@ Since QUERY only accepts homogeneous data, you may have to convert your data to 
 
 Notes
 
-This technique joins each row by " ". It is effectively the same as BYCOL(array, LAMBDA(col, JOIN(" ", col))) except for how it does not allow mixed data types. If you expect to have null values throughout, you may have to use REGEX functions in order to format the output.
+This technique joins each row by " ". It is effectively the same as 
+```haskell
+BYCOL(array, LAMBDA(col, JOIN(" ", col)))
+```
+except for how it does not allow mixed data types. If you expect to have null values throughout, you may have to use REGEX functions in order to format the output.
