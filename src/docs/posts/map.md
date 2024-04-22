@@ -42,7 +42,7 @@ if we use
 =MAP(A1:A3,B1:B3,C1:C3,lambda(a,b,c,a+b+c))
 ```
 
-It will return
+In D1 it will return
 | A                | B             | C         | D         |
 | ---------------- | ------------- | --------- | --------- |
 | 1 |4|7|12|
