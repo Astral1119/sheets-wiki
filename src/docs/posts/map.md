@@ -12,9 +12,9 @@ Typical use cases are if you tend to drag a formula across an entire column or r
 
 | A                | B             | C         |
 | ---------------- | ------------- | --------- |
-| 1 ||||
-| 2 ||||
-| 3 ||||
+| 1 |||
+| 2 |||
+| 3 |||
 
 If we used 
 ```haskell
@@ -24,9 +24,9 @@ in the cell B1 we would get
 
 | A                | B             | C         |
 | ---------------- | ------------- | --------- |
-| 1 |2|||
-| 2 |3|||
-| 3 |4|||
+| 1 |2||
+| 2 |3||
+| 3 |4||
 
 When using map the LAMBDA(<variable>, <variable> can be named anything you would like
 Map supports up to any number equally sized arrays for example
