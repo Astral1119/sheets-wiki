@@ -8,7 +8,7 @@ tags:
 short: Zero Elements
 ---
 
-Zero elements are values that, when used in [[arrays|arrays]], have no width and/or height.
+Zero elements are values that, when used in [[arrays]], have no width and/or height.
 
 # Syntax
 
