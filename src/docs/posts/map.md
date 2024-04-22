@@ -10,7 +10,7 @@ tags:
 The MAP function allows for users to apply logic or other functions across a range of cells.
 Typical use cases are if you tend to drag a formula across an entire column or row creating many formula cells. You may use MAP to create a singular formula cell that affects the entire range. An example would be
 
-| A       :         | B             | C         |
+| A                | B             | C         |
 | ----------------: | ------------- | --------- |
 | 1 |||
 | 2 |||
@@ -22,7 +22,7 @@ If we used
 ```
 in the cell B1 we would get
 
-| A       :         | B     :        | C         |
+| A                | B     :        | C         |
 | ----------------: | -------------: | --------- |
 | 1 |2||
 | 2 |3||
