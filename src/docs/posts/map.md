@@ -11,7 +11,7 @@ The MAP function allows for users to apply logic or other functions across a ran
 Typical use cases are if you tend to drag a formula across an entire column or row creating many formula cells. You may use MAP to create a singular formula cell that affects the entire range. An example would be
 
 | A                | B             | C         |
-| ----------------: | -------------: | ---------: |
+| :----------------: | :-------------: | :---------: |
 | 1 |||
 | 2 |||
 | 3 |||
@@ -32,7 +32,7 @@ When using map the LAMBDA(variable, variable can be named anything you would lik
 Map supports up to any number equally sized arrays for example
 
 | A                | B             | C         | D         |
-| ----------------: | -------------: | ---------: | ---------: |
+| :----------------: | :-------------: | :---------: | :---------: |
 | 1 | 4 | 7 ||
 | 2 | 5 | 8 ||
 | 3 | 6 | 9 ||
@@ -44,7 +44,7 @@ if we use
 
 In D1 it will return
 | A                | B             | C         | D         |
-| ----------------: | -------------: | ---------: | ---------: |
+| :----------------: | :-------------: | :---------: | :---------: |
 | 1 | 4 | 7 | 12 |
 | 2 | 5 | 8 | 15 |
 | 3 | 6 | 9 | 18 |
