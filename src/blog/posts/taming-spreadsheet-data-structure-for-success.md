@@ -13,7 +13,7 @@ Proper data structure leads to better data ingestion, smoother experience, and e
 Let's look at an example.
 
 | A                | B             | C         |     |
-| ---------------- | ------------- | --------- | --- |
+| :----------------: | :-------------: | :---------: | :---: |
 | Week of 4/1/2024 |               |           |     |
 | Monday           |               |           |     |
 |                  | Gas           | \-$25.00  |     |
@@ -40,7 +40,7 @@ Let's look at an example.
 This is an example of a data structure that would be fine to use if you're only planning on 1-3 weeks to track expenses. However, how about 2 months, 6 months, 3 years? It becomes harder and harder to find information like "How much am i spending every week on average?" or "How much am I spending on groceries every month?"
 
 | A        | B             | C         |
-| -------- | ------------- | --------- |
+| :--------: | :-------------: | :---------: |
 | Day      | Item          | Amount    |
 | 4/1/2024 | Gas           | \-$25.00  |
 | 4/1/2024 | Food          | \-$10.00  |
@@ -84,7 +84,7 @@ This structure allows you to track weeks, months, or years and allows you to eas
 Let's take a look at another example.
 
 | A                | B             | C         | D          | E          |
-| ---------------- | ------------- | --------- | ---------- | ---------- |
+| :----------------: | :-------------: | :---------: | :----------: | :----------: |
 | PO               |   Customer    | Item      |  Quantity  | Date       |
 | 123456           | ABC Company   |   Water   |   1        | 4/1/2024   |
 | 123456           | ABC Company   |   Meat    |   2        | 4/1/2024   |
