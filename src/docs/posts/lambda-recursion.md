@@ -15,7 +15,7 @@ LET(func, LAMBDA(func, <variables>, <expression>), func(func, <variables>))
 ```haskell
 LAMBDA(func, func(func, <variables>))(LAMBDA(func, <variables>, <expression>))
 ```
-Using \[[LAMBDA]]
+Using [[LAMBDA]]
 Either syntax is valid; however, LET is typically easier to work with and read.
 
 Typical use-cases involve using a function until a particular condition is met
