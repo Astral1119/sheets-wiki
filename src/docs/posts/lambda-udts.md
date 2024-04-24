@@ -41,4 +41,4 @@ Note that the above formula errors out. In order to access data stored within a 
 
 The UDT works by accepting a LAMBDA function as input which then accesses the data within the UDT.
 LAMBDA UDTs can accept anything as an attribute, including arrays, lambda terms, and other UDTs.
-However, they are not without limitations. Due to their LAMBDA-heavy nature, \[[calculation limits]] represent an additional obstacle. They also require user-defined interfaces in order to work properly.
+However, they are not without limitations. Due to their LAMBDA-heavy nature, \[calculation limits](https://sheets.wiki/calculation-limits/) represent an additional obstacle. They also require user-defined interfaces in order to work properly.
