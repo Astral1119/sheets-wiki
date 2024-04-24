@@ -11,19 +11,19 @@ tags:
 ```haskell
 LAMBDA(volatile, update, volatile)([volatile function], [update condition])
 ```
-\[[LAMBDA]] references only recalculate when a change is detected in a cell referenced by the formula. This property overrides the typical volatile property of updating whenever any cell is updated.
+[LAMBDA](https://sheets.wiki/lambda/) references only recalculate when a change is detected in a cell referenced by the formula. This property overrides the typical volatile property of updating whenever any cell is updated.
 
-Because LUS is unstable, typical use cases relate to temporary randomization and dice rolling.
+Because LUS is [unstable](https://sheets.wiki/unstable/), typical use cases relate to temporary randomization and dice rolling.
 
-Meaning if you delete,update,change the cell you cannot undo to get the same stored result back.
-Also, a warning, lambda functions have a reported tendency to randomly update with no particular source causing it. This method for storing volatile results is not recommended for critical data. 
+Like all volatile functions, LUS will cause a desynchronization between the server and client sheets. In order to load the canon server-side value, simply refresh your client.
 
-Example
+# Example
 ```haskell
-=LAMBDA(x,x)(Randbetween(1,10))
+=LAMBDA(x,x)(RANDBETWEEN(1,10))
 ```
-Will Randbetween 1 and 10 and will not change every cell change, unlike typical behavior of 
+
+This `RANDBETWEEN` will not update on a cell change. Compare to:
+
 ```haskell
-=Randbetween(1,10)
+=RANDBETWEEN(1,10)
 ```
-which will change every cell change.
