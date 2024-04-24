@@ -16,7 +16,7 @@ In this scenario we're concerned if A1 has the status of 2, 4, or 10 it passes t
 So we can do this instead.
 
 ```haskell
-=IF(OR(SORT(A1={2;4;10})),"Pass","Warning")
+=IF(SORT(OR(A1={2;4;10})),"Pass","Warning")
 ```
 
 Sort() what it does is enables the array A1={2;4;10} so the output if A1 is 4
@@ -29,14 +29,14 @@ instead of False being A1=2 because it's not array enabled and only looks at the
 
 This also helps us with AND()
 ```haskell
-=IF(AND(SORT(A1>{B1;C1;D1}),SORT(A1<{B2;C2;D2})),"Pass","Warning")
+=IF(SORT(AND(A1>{B1;C1;D1},A1<{B2;C2;D2})),"Pass","Warning")
 ```
 In this situation we need all statements to be True, A1 is greater than B1 and C1 and D1 additionally less than B2 and C2 and D2. But, thankfully we don't have to write A1> and A1< 6 times total making the formula longer and harder to read or adjust. Even more if there's more conditions.
 
 Because it's a range we can also
 
 ```haskell
-=IF(AND(SORT(A1>{B1:D1}),SORT(A1<{B2:D2})),"Pass","Warning")
+=IF(SORT(AND(A1>{B1:D1},A1<{B2:D2})),"Pass","Warning")
 ```
 
 So if you have a table of acceptable (or not) ranges you can refer to those as well.
@@ -45,7 +45,7 @@ Another formula we can use is Let() to make our formula more readable.
 ```haskell
 =LET(
 conditionals,{2;4;10},
-IF(OR(SORT(A1=conditionals)),"Pass","Warning")
+IF(SORT(OR(A1=conditionals)),"Pass","Warning")
 )
 ```
 
