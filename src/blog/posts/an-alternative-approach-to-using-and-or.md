@@ -1,6 +1,6 @@
 ---
 title: An alternative approach to using AND()/OR()
-description: An alternative method to a cell meeting many criteria
+description: An alternative method to a cell checking against many criteria
 author: Aliafriend
 date: 2024-04-24T12:49:06.931Z
 tags:
