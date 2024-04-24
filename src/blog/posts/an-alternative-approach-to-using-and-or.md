@@ -33,6 +33,14 @@ This also helps us with AND()
 ```
 In this situation we need all statements to be True, A1 is greater than B1 and C1 and D1 additionally less than B2 and C2 and D2. But, thankfully we don't have to write A1> and A1< 6 times total making the formula longer and harder to read or adjust. Even more if there's more conditions.
 
+Because it's a range we can also
+
+```haskell
+=IF(AND(SORT(A1>{B1:D1}),SORT(A1<{B2:D2})),"Pass","Warning")
+```
+
+So if you have a table of acceptable (or not) ranges you can refer to those as well.
+
 Another formula we can use is Let() to make our formula more readable.
 ```haskell
 =LET(
