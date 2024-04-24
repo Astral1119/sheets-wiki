@@ -39,6 +39,21 @@ Note that the above formula errors out. In order to access data stored within a 
 )
 ```
 
-The UDT works by accepting a LAMBDA function as input which then accesses the data within the UDT.
-LAMBDA UDTs can accept anything as a field, including arrays, lambda terms, and other UDTs.
-However, they are not without limitations. Due to their LAMBDA-heavy nature, [calculation limits](https://sheets.wiki/calculation-limits/) represent an additional obstacle. They also require user-defined interfaces in order to work properly.
+This formula works by accepting a LAMBDA function, known as the method, as input. The method then accesses the data within the UDT. Performing the \[β-reduction](https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction_2) for this formula, we start by resolving the `pair` instantiation:
+
+```haskell
+
+lambda(m,m("foo","bar"))(first)
+
+```
+
+Then, we resolve the `m` term:
+
+```haskell
+first("foo","bar")
+```
+
+Which then resolves to `"foo"`.
+
+
+LAMBDA UDTs can accept anything as a field, including arrays, lambda terms, and other UDTs. However, they are not without limitations. Due to their LAMBDA-heavy nature, [calculation limits](https://sheets.wiki/calculation-limits/) represent an additional obstacle. They also require user-defined interfaces in order to work properly.
