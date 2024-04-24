@@ -9,7 +9,7 @@ tags:
   - data-type
   - terminology
 ---
-LAMBDA UDTs use \[[LAMBDA]] to define a derived data type. These types take the form:
+LAMBDA UDTs use [LAMBDA](https://sheets.wiki/lambda/) to define a derived data type. These types take the form:
 
 ```haskell
 lambda(f,f(a,b...))
