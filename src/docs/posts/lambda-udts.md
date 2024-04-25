@@ -15,7 +15,7 @@ LAMBDA UDTs use [LAMBDA](https://sheets.wiki/lambda/) to define a custom data ty
 lambda(m,m(a,b...))
 ```
 
-LAMBDA UDTs emulate the [object-oriented programming paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming), where UDTs consist of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) and [methods](https://en.wikipedia.org/wiki/Method_(computer_programming)). LAMBDA UDTs can be [instantiated](https://en.wikipedia.org/wiki/Instance_(computer_science)) manually or via constructor:
+LAMBDA UDTs emulate the [object-oriented programming paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming), where UDTs consist of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) and [methods](https://en.wikipedia.org/wiki/Method_(computer_programming)). In other words, they allow the user to define collections of different kinds of data that can be used as both input and output for user-defined functions. In order to be used, UDTs must be [instantiated](https://en.wikipedia.org/wiki/Instance_(computer_science)). LAMBDA UDTs can be instantiated manually or via constructor:
 
 ```haskell
 =let(
@@ -39,7 +39,7 @@ Note that the above formula errors out. In order to access data stored within a 
 )
 ```
 
-This formula works by accepting a LAMBDA function, known as the method, as input. The method then accesses the data within the UDT. Performing the [β-reduction](https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction_2) for this formula, we start by resolving the `pair` instantiation:
+This formula works by accepting a LAMBDA function, known as the method, as input. The method then accesses the data within the UDT. Note that all methods must be lambda terms that accept all fields of the UDT as arguments. Performing the [β-reduction](https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction_2) for this formula, we start by resolving the `pair` instantiation:
 
 ```haskell
 
