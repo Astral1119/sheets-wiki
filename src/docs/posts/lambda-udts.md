@@ -9,13 +9,16 @@ tags:
   - data-type
   - terminology
 ---
-LAMBDA UDTs use [LAMBDA](https://sheets.wiki/lambda/) to define a custom data type. These types take the form:
+LAMBDA UDTs use [LAMBDA](https://sheets.wiki/lambda/) to define a custom data type. They emulate the [object-oriented programming paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming), where UDTs consist of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) and [methods](https://en.wikipedia.org/wiki/Method_(computer_programming)). These types take the form:
 
 ```haskell
 lambda(m,m(a,b...))
 ```
 
-LAMBDA UDTs emulate the [object-oriented programming paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming), where UDTs consist of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) and [methods](https://en.wikipedia.org/wiki/Method_(computer_programming)). In other words, they allow the user to define collections of different kinds of data that can be used as both input and output for user-defined functions. In order to be used, UDTs must be [instantiated](https://en.wikipedia.org/wiki/Instance_(computer_science)). LAMBDA UDTs can be instantiated manually or via constructor:
+Data is [encapsulated](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) inside a number of user-defined fields, listed as `a,b...` in the expression above. These fields can contain any data types, including ranges, [arrays](https://sheets.wiki/arrays/), and lambda terms.
+In other words, they allow the user to define collections of different kinds of data that can be used as both input and output for user-defined functions.
+
+UDTs must be [instantiated](https://en.wikipedia.org/wiki/Instance_(computer_science)) and provided data for each field to be operated on. LAMBDA UDTs can be instantiated manually or via constructor:
 
 ```haskell
 =let(
@@ -26,7 +29,9 @@ LAMBDA UDTs emulate the [object-oriented programming paradigm](https://en.wikipe
 )
 ```
 
-Note that the above formula errors out. In order to access data stored within a LAMBDA UDT, you must define LAMBDA terms to interface with it. In other words, all fields are [private](https://en.wikipedia.org/wiki/Access_modifiers) and must be accessed through public methods. For example, if we want to implement a [pair](https://www.geeksforgeeks.org/pair-in-cpp-stl/) structure, we could implement methods to access the `first` and `second` elements like so:
+Note that the above formula only shows instantiation. The output will be a lambda term which cannot be output to a cell.
+
+To access data stored within a LAMBDA UDT, you must define lambda terms, or lambda functions, to interface with it. These terms, known as methods, take each field of the UDT as arguments. All fields of a LAMBDA UDT are [private](https://en.wikipedia.org/wiki/Access_modifiers) and must be accessed through methods. For example, if we want to implement a [pair](https://www.geeksforgeeks.org/pair-in-cpp-stl/) structure, where the UDT stores two associated fields of any type, we could implement methods to access the `first` and `second` elements like so:
 
 ```haskell
 =let(
@@ -55,4 +60,4 @@ first("foo","bar")
 
 Which then resolves to `"foo"`.
 
-LAMBDA UDTs can accept anything as a field, including arrays, lambda terms, and other UDTs. However, they are not without limitations. Due to their LAMBDA-heavy nature, [calculation limits](https://sheets.wiki/calculation-limits/) represent an additional obstacle. They also require user-defined interfaces in order to work properly.
+[Calculation limits](https://sheets.wiki/calculation-limits/) represent a major limitation to LAMBDA UDTs, as they are heavily LAMBDA-intensive in nature and can quickly hit the recursion limit. LAMBDA UDTs also require user-defined interfaces in order to work properly.
