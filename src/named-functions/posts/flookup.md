@@ -14,4 +14,4 @@ This library contains three fuzzy lookup algorithms:
 This library is maintained by Astral.
 Last major commit February 7, 2023.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4zp-J1voLPKT5ADWMpxPZo5TfbdDUeuif9Vgmhsal198NlH_BIQDzmdpz6BBGdDapH9Wx71keA386/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe style="height:150px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4zp-J1voLPKT5ADWMpxPZo5TfbdDUeuif9Vgmhsal198NlH_BIQDzmdpz6BBGdDapH9Wx71keA386/pubhtml?widget=true&amp;headers=false"></iframe>
