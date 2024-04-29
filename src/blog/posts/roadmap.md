@@ -10,8 +10,9 @@ tags:
 # Planned Features (listed in order of priority)
 - Implement [OGP](https://ogp.me/) standards
 - Markdown overhaul
+- Navigation tools (BookStack structure)
 - Theming
 - Shift CMS backend off of Netlify
 
 # Proposed Features
-- 04/23/2024 Google Sheets integrations
+- Empty for now
