@@ -1,5 +1,4 @@
 // Plugins from Obsidian Garden
-const slugify = require("@sindresorhus/slugify");
 const markdownIt = require("markdown-it");
 const { parse } = require("node-html-parser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
