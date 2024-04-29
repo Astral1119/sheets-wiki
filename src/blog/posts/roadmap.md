@@ -8,7 +8,6 @@ tags:
   - advice
 ---
 # Planned Features (listed in order of priority)
-- Implement [OGP](https://ogp.me/) standards
 - Markdown overhaul
 - Navigation tools (BookStack structure)
 - Theming
