@@ -1,11 +1,10 @@
 ---
 title: Levenshtein Distance
-description: Recreating the Levenshtein Distance Algorithm in Google Sheets in
-  response to ztiaa's challenge.
+description: Recreating the Levenshtein Distance Algorithm in Google Sheets in response to ztiaa's challenge.
 author: Astral Café
 date: 2024-04-01T21:55:42.643Z
 tags:
-  - from
+  - all
 ---
 ### Introduction
 

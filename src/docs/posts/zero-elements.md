@@ -4,12 +4,11 @@ description: Elements with no height or width can be useful in array constructio
 author: Astral Café
 date: 2024-04-01
 tags:
-  - left
+  - technique
+  - data-type
 short: Zero Elements
 ---
-
 Zero elements are values that, when used in [[arrays]], have no width and/or height.
-
 # Syntax
 
 | **0 x 1**   | **1 x 0**   | **0 x 0**             |
