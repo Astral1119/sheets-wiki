@@ -2,7 +2,7 @@
 title: Method-Based LAMBDA UDTs
 description: An archival post for the old LAMBDA UDT method.
 author: Astral Café
-date: 2024-04-22T18:43:07.305Z
+date: 2024-04-28
 tags:
   - archive
 ---

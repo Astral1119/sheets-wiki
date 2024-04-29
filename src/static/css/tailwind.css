@@ -12,6 +12,12 @@ h3 {
   @apply text-2xl font-bold mb-3;
 }
 
+/* Google Sheets embeds */
+
+iframe {
+  width: 100%;
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
