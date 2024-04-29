@@ -1,7 +1,7 @@
 ---
 title: LAMBDA User-Defined Types
 short: LAMBDA UDTs
-permalink: /lambda-udts/
+
 description: Functional data abstraction using LAMBDA.
 date: 2024-04-22T19:12:09.421Z
 tags:

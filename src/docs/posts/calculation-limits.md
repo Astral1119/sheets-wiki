@@ -1,7 +1,6 @@
 ---
 title: Calculation Limits
 short: Calculation Limits
-permalink: /calculation-limits/
 description: Calculation Limits
 date: 2024-04-22T18:30:40.176Z
 tags:

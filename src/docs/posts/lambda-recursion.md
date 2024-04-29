@@ -1,7 +1,6 @@
 ---
 title: LAMBDA Recursion
 short: LAMBDA Recursion
-permalink: /lambda-recursion/
 description: LAMBDA Recursion
 date: 2024-04-22T18:32:57.177Z
 tags:

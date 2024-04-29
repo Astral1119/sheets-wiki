@@ -1,7 +1,6 @@
 ---
 title: Query Smush
 short: Query Smush
-permalink: /query-smush/
 description: QUERY smush is a technique that joins all elements of each column
   of an array together.
 date: 2024-04-22T18:39:44.161Z

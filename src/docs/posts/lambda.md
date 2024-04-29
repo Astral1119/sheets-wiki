@@ -1,7 +1,6 @@
 ---
 title: The LAMBDA Function
 short: LAMBDA
-permalink: /LAMBDA/
 description: The LAMBDA Function
 date: 2024-04-22T18:21:38.105Z
 tags:

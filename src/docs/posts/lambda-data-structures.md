@@ -1,7 +1,6 @@
 ---
 title: LAMBDA Data Structures
 short: LAMBDA Data Structures
-permalink: /lambda-data-structures/
 description: Functional data structure implementations using LAMBDA.
 date: 2024-04-22T18:50:22.236Z
 tags:

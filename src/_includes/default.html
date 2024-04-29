@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="{{title}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://sheets.wiki/static/img/icon.svg"/>
+    <meta property="og:url" content="placeholder"/>
+    <script>
+      // Dynamically set og:url meta tag based on current page URL
+      document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
+    </script>
 
     <title>
       {{title}}
     </title>
     {% if description %}
       <meta name="description" content="{{description}}"/>
+      <meta property="og:description" content="{{description}}"/>
     {% endif %}
+
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}

@@ -7,7 +7,7 @@ tags:
   - data-type
 short: Zero Elements
 ---
-Zero elements are values that, when used in [[arrays]], have no width and/or height.
+Zero elements are values that, when used in [arrays](https://sheets.wiki/arrays/), have no width and/or height.
 # Syntax
 
 | **0 x 1**   | **1 x 0**   | **0 x 0**             |

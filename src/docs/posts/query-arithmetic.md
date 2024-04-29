@@ -1,7 +1,6 @@
 ---
 title: Query Arithmetic
 short: Query Arithmetic
-permalink: /query-arithmetic/
 description: Query Arithmetic
 date: 2024-04-22T18:37:28.202Z
 tags:

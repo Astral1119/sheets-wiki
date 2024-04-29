@@ -1,7 +1,6 @@
 ---
 title: The MAP Function
 short: Map
-permalink: /map/
 description: The MAP Function
 date: 2024-04-22T19:24:24.176Z
 tags:
