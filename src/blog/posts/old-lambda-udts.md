@@ -6,7 +6,7 @@ date: 2024-04-28
 tags:
   - archive
 ---
-This post details the first LAMBDA UDT scheme. It is no longer best practice, but here is the previous article in full for archival purposes. See the main [LAMBDA UDT](https://sheets.wiki/lambda-udts/) page for up-to-date information.
+This post details the first LAMBDA UDT scheme. This version is no longer best practice due to inefficient field access that counted against the [calculation limits](https://sheets.wiki/calculation-limits/). However, I've opted to archive the old article as a blog post. See the main [LAMBDA UDT](https://sheets.wiki/lambda-udts/) page for up-to-date information.
 
 LAMBDA UDTs use [LAMBDA](https://sheets.wiki/lambda/) to define a custom data type. They emulate the [object-oriented programming paradigm](https://en.wikipedia.org/wiki/Object-oriented_programming), where UDTs consist of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) and [methods](https://en.wikipedia.org/wiki/Method_(computer_programming)). These types take the form:
 

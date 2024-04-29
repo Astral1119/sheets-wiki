@@ -31,6 +31,17 @@ UDTs must be [instantiated](https://en.wikipedia.org/wiki/Instance_(computer_sci
 
 Note that the above formula only shows instantiation. The output will be a lambda term which cannot be output to a cell.
 
-To access data stored within a LAMBDA UDT, simply provide it with an index argument. The [β-reduction](https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction_2) will then supply that index to the `CHOOSE`, returning the field at the desired index.
+To access data stored within a LAMBDA UDT, simply provide it with an index argument, as shown below:
+
+```haskell
+=let(
+    udt,lambda(a,b...,
+        lambda(i,choose(i,a,b...))
+    ),
+    udt(a,b...)(<index>)
+)
+```
+
+The [β-reduction](https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction_2) will then supply that index to the `CHOOSE`, returning the field at the desired index.
 # Notes
 [Calculation limits](https://sheets.wiki/calculation-limits/) represent a major limitation to LAMBDA UDTs, as they are heavily LAMBDA-intensive in nature and can quickly hit the recursion limit.
