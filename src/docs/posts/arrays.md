@@ -1,7 +1,6 @@
 ---
 title: Arrays
 description: Ordered collections of elements.
-author: Astral Café
 date: 2024-04-01
 tags:
   - data-type
