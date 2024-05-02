@@ -1,0 +1,47 @@
+---
+layout: default
+pagination:
+  data: collections.bookPages
+  size: 1
+  alias: bookPage
+permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName %}{{ bookPage.chapterName | slugify}}/{% endif %}{{ bookPage.page | slugify }}/index.html"
+---
+
+{%- for item in pagination.items %}
+    {% set book = item.bookTitle %}
+    {% set bookdata = collections.datafp.get("books", book | slugify)[0] %}
+    {% set list = bookdata.data.items %}
+
+    {% include "../_includes/partials/sidebar.njk" %}
+
+    {% set current = collections.datafp.get("pages", item.page)[0] %}
+
+    <div class="container max-w-4xl mt-6 px-6">
+        <div class="pb-5 mb-5 border-b border-gray-100">
+            <h1 class="font-bold text-5xl">{{current.data.title}}</h1>
+            <p class="text-center text-base leading-6 font-medium text-gray-500">
+                {% if current.data.author %}
+                    <time> {{ current.data.date | readableDate }}
+                        by
+                        <a>{{ current.data.author }}</a>
+                    </time>
+                {% else %}
+                    <time> {{ current.data.date | readableDate }} </time>
+                {% endif %}
+            </p>
+
+        </div>
+
+        <article class="prose lg:prose-xl my-4 mx-auto">
+            {{ current.content | safe }} </article>
+
+        <script src="https://utteranc.es/client.js"
+            repo="Astral1119/sheets-wiki"
+            issue-term="og:title"
+            label="🔮"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+{% endfor -%}

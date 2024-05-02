@@ -19,6 +19,115 @@ iframe {
   height: 40vh;
 }
 
+/* Shelf cards */
+
+.shelf.third {
+  grid-template-columns: 1fr 1fr 1fr
+}
+
+@media screen and (max-width: 880px) {
+  .shelf.third:not(.no-break) {
+      grid-template-columns:1fr 1fr
+  }
+
+  .shelf.half:not(.no-break),.shelf.left-focus:not(.no-break),.shelf.right-focus:not(.no-break) {
+      grid-template-columns: 1fr
+  }
+
+  .shelf.half.collapse-xs {
+      grid-template-columns: 1fr 1fr
+  }
+
+  .shelf.gap-xl {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px
+  }
+
+  .shelf.right-focus.reverse-collapse>*:nth-child(2) {
+      order: 0
+  }
+
+  .shelf.right-focus.reverse-collapse>*:nth-child(1) {
+      order: 1
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shelf.third:not(.no-break) {
+      grid-template-columns:1fr
+  }
+}
+
+@media screen and (min-width: 600px)and (max-width: 880px) {
+  #home-default>.shelf.third {
+      display:block;
+      columns: 2;
+      column-gap: 24px !important
+  }
+}
+
+.shelf {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 24px;
+}
+
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-color: #ddd;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 100px;
+  color: #444;
+  transition: border-color ease-in-out 120ms,box-shadow ease-in-out 120ms;
+}
+
+.sidebar {
+  width: 250px; /* Adjust width as needed */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.chaptername {
+  font-size: 20px;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-list li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],

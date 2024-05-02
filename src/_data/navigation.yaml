@@ -1,10 +1,14 @@
 ---
 items:
+  - text: All Pages
+    url: "/pages"
+  - text: All Books
+    url: "/books"
   - text: About
     url: "/about"
   - text: Docs
-    url: "/docs"
+    url: "/shelves/documentation"
   - text: Blog
-    url: "/blog"
+    url: "/shelves/blog"
   - text: "Named Functions"
-    url: "/named-functions"
+    url: "/shelves/named-functions"

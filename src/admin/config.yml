@@ -28,9 +28,9 @@ display_url: https://sheets.wiki
 logo_url: https://sheets.wiki/static/img/icon.svg
 
 collections:
-  - name: "docs"
-    label: "Documentation"
-    folder: "src/docs/posts"
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
     create: true
     editor:
       preview: false
@@ -41,56 +41,24 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Title", name: "short", widget: "string" }
-      - { label: "Permalink (/permalink/)", name: "permalink", widget: "string", pattern: ['/[\w-\d]+/', "Must begin and end with / and only contain numbers, letters, and hyphens"] }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-     
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["function", "technique", "data-type", "terminology"]
-
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blog/posts"
+  
+  
+  - name: "books"
+    label: "Books"
+    folder: "src/books"
     create: true
     editor:
       preview: false
-    preview_path: blog/posts/{{slug}}
+    preview_path: "books/{{slug}}"
+    sortable_fields: ['commit_date', 'short', 'commit_author']
+
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["algorithm", "game", "tutorial", "advice"]
-
-  - name: "named-function"
-    label: "Named Function"
-    folder: "src/named-functions/posts"
-    create: true
-    editor:
-      preview: false
-    preview_path: named-functions/posts/{{slug}}
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["parsing", "data", "aggregation", "higher-order"]
-
-

@@ -1,13 +1,13 @@
 ---
 links:
   - title: Documentation
-    url: "/docs/"
+    url: "/shelves/documentation/"
     desc: Community-driven documentation.
   - title: Discord
     url: "https://discord.gg/M9GKpPd"
     desc: The Spreadsheets Discord Community.
   - title: About
-    url: "/about"
+    url: "/about/"
     desc: Under Construction
   - title: The Astral Café
     url: "https://docs.astral.cafe/"

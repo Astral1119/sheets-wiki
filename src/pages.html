@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<div class="container max-w-3xl mt-6 px-6">
+
+    <h1 class="font-bold text-5xl">All Pages</h1>
+
+    <!-- THIS SECTION IS FOR SEARCH -->
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <div id="search"></div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
+
+    <section class="mt-15">
+        {% set pagelist = collections.pages %}
+
+        {% for page in pagelist | reverse %}
+            <article class="my-8">
+                <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                    <a href="{{ doc.url | url }}">
+                        {% if page.data.title %}
+                            {{ page.data.title }}
+                        {% else %}
+                            Untitled
+                        {% endif %}
+                    </a>
+                </h2>
+                <p class="text-base leading-6 text-gray-500 mb-3">
+                    <time>
+                        {{ page.date | readableDate }}
+                    </time>
+                </p>
+                {% if page.data.description %}
+                    <p class="text-lg text-gray-500 mb-3">
+                        {{ page.data.description }}
+                    </p>
+                {% endif %}
+
+                <p>
+                    <a href="{{ page.url | url }}" class="text-indigo-500 font-bold text-lg">
+                        Read more →
+                    </a>
+                </p>
+
+            </article>
+        {% endfor %}
+    </section>
+</div>

@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="container max-w-3xl mt-6 px-6">
 
-    <h1 class="font-bold text-5xl">Documentation</h1>
+    <h1 class="font-bold text-5xl">All Pages</h1>
 
     <!-- THIS SECTION IS FOR SEARCH -->
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
@@ -16,14 +16,14 @@ layout: default
     </script>
 
     <section class="mt-15">
-        {% set docslist = collections.doc %}
+        {% set pagelist = collections.books %}
 
-        {% for doc in docslist | reverse %}
+        {% for page in pagelist | reverse %}
             <article class="my-8">
                 <h2 class="font-bold text-3xl text-gray-900 mb-2">
                     <a href="{{ doc.url | url }}">
-                        {% if doc.data.title %}
-                            {{ doc.data.title }}
+                        {% if page.data.title %}
+                            {{ page.data.title }}
                         {% else %}
                             Untitled
                         {% endif %}
@@ -31,17 +31,17 @@ layout: default
                 </h2>
                 <p class="text-base leading-6 text-gray-500 mb-3">
                     <time>
-                        {{ doc.date | readableDate }}
+                        {{ page.date | readableDate }}
                     </time>
                 </p>
-                {% if doc.data.description %}
+                {% if page.data.description %}
                     <p class="text-lg text-gray-500 mb-3">
-                        {{ doc.data.description }}
+                        {{ page.data.description }}
                     </p>
                 {% endif %}
 
                 <p>
-                    <a href="{{ doc.url | url }}" class="text-indigo-500 font-bold text-lg">
+                    <a href="{{ page.url | url }}" class="text-indigo-500 font-bold text-lg">
                         Read more →
                     </a>
                 </p>

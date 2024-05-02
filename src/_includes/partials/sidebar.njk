@@ -1,0 +1,20 @@
+<aside class="sidebar">
+    <ul class="sidebar-list">
+        <h3>Contents</h3>
+        <li><a href="/books/{{ book | slugify }}/">{{ book }}</a></li>
+        {% for thing in list %}
+            {% if thing.chapter %}
+                <li class="chaptername">{{ thing.chapter.name }}</li>
+                    <ul>
+                        {% for page in thing.chapter.pages %}
+                            {% set current = collections.datafp.get("pages", page)[0] %}
+                            <li><a href="/books/{{ book | slugify }}/{{ thing.chapter.name | slugify }}/{{ page }}">{{ current.data.short | default(current.data.title) }}</a></li>
+                        {% endfor %}
+                    </ul>
+            {% else %}
+                {% set current = collections.datafp.get("pages", thing.page)[0] %}
+                <li><a href="/books/{{ book | slugify }}/{{ thing.page }}">{{ current.data.short | default(current.data.title) }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</aside>

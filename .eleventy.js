@@ -2,17 +2,18 @@
 const markdownIt = require("markdown-it");
 const { parse } = require("node-html-parser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
+const { headerToId, namedHeadingsFilter } = require("./src/_helpers/utils");
 const {
   userMarkdownSetup,
   userEleventySetup,
-} = require("./src/helpers/userSetup");
+} = require("./src/_helpers/userSetup");
 
 // This is for the NEAT Template.
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const fs = require('fs');
 
 module.exports = function (eleventyConfig) {
 
@@ -180,7 +181,7 @@ module.exports = function (eleventyConfig) {
     // lets make a variable to hold our redirects
     let redirects = [];
     // We need to get each post in our posts folder. In my case this is /node
-    const nodes = collectionApi.getFilteredByGlob("src/*/posts/*.md");
+    const nodes = collectionApi.getFilteredByGlob("src/*/*.md");
     // next lets iterate over all the nodes
     nodes.forEach(node =>
       // for each alias
@@ -189,8 +190,59 @@ module.exports = function (eleventyConfig) {
         redirects.push([node.data.page.url,node.data.page.url.replace(/\/[^\/]*?(\..+)?$/, `/${alias}$1`)])
       )
     )
-    return redirects
-  })
+    return redirects;
+  });
+
+  // Custom collection to gather pages along with their chapters
+  eleventyConfig.addCollection("bookPages", function(collection) {
+    // Initialize an empty array to store pages
+    let bookPages = [];
+
+    // Loop through each item in the 'books' collection
+    collection.getFilteredByTag("books").forEach(book => {
+        // Accessing the items array in the frontmatter of each book
+        let bookItems = book.data.items;
+
+        // Loop through each item in the 'items' array
+        bookItems.forEach(item => {
+            // Check if the item is a page
+            if(item.page) {
+                // Push the page details along with book and chapter info to the 'bookPages' array
+                bookPages.push({
+                    bookTitle: book.data.title,
+                    chapterName: item.chapter ? item.chapter.name : null,
+                    page: item.page
+                });
+            } else if(item.chapter && item.chapter.pages) {
+                // If the item is a chapter with multiple pages
+                item.chapter.pages.forEach(page => {
+                    // Push each page along with book and chapter info to the 'bookPages' array
+                    bookPages.push({
+                        bookTitle: book.data.title,
+                        chapterName: item.chapter.name,
+                        page: page
+                    });
+                });
+            }
+        });
+    });
+
+    // Return the final array containing all pages along with their book and chapter info
+    return bookPages;
+  });
+
+  eleventyConfig.addCollection("datafp", function(collectionApi) {
+    return {
+        getAll: function() {
+            // Return all items with metadata
+            return collectionApi.getAllSorted().filter(item => item.data);
+        },
+        get: function(type, filepath) {
+            // Find item by filepath
+            return collectionApi.getFilteredByGlob("src/" + type + "/" + filepath + ".md");
+        }
+    };
+  });
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk

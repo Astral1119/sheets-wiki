@@ -1,0 +1,24 @@
+---
+layout: default
+pagination:
+  data: shelves
+  size: 1
+  alias: shelf
+permalink: "shelves/{{ shelf.name | slugify }}/index.html"
+---
+
+{%- for item in pagination.items %}
+    <h1>{{ item.name }}</h1>
+    <div class = "shelf third">
+        {% for book in item.books %}
+            <a href="../../books/{{ book.name | slugify }}/" class="grid-card">
+                <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                    {{ book.name }}
+                </h2>
+                <p class="description">
+                    {{ book.desc }}
+                </p>
+            </a>
+        {% endfor %}
+    </div>
+{% endfor -%}
