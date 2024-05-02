@@ -62,3 +62,21 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: Structure
+        name: items
+        widget: 'list'
+        types:
+          - label: Page
+            name: page
+            widget: object
+            fields:
+              - { label: Page, name: page, widget: string, default: 'slug, i.e. levenshtein-distance' }
+          - label: Chapter
+            name: chapter
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string, default: 'Chapter Name' }
+              - label: "Pages"
+                name: "pages"
+                widget: "list"
+                min: 1
