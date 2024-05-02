@@ -210,16 +210,15 @@ module.exports = function (eleventyConfig) {
                 // Push the page details along with book and chapter info to the 'bookPages' array
                 bookPages.push({
                     bookTitle: book.data.title,
-                    chapterName: item.chapter ? item.chapter.name : null,
                     page: item.page
                 });
-            } else if(item.chapter && item.chapter.pages) {
+            } else {
                 // If the item is a chapter with multiple pages
-                item.chapter.pages.forEach(page => {
+                item.pages.forEach(page => {
                     // Push each page along with book and chapter info to the 'bookPages' array
                     bookPages.push({
                         bookTitle: book.data.title,
-                        chapterName: item.chapter.name,
+                        chapterName: item.name,
                         page: page
                     });
                 });
