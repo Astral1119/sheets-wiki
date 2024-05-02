@@ -73,10 +73,11 @@ collections:
               - { label: Page, name: page, widget: string, default: 'slug, i.e. levenshtein-distance' }
           - label: Chapter
             name: chapter
-            widget: object
+            widget: list
             fields:
               - { label: Name, name: name, widget: string, default: 'Chapter Name' }
               - label: "Pages"
                 name: "pages"
-                widget: "list"
+                widget: list
+                field: { label: Page, name: page, widget: string }
                 min: 1
