@@ -32,11 +32,15 @@
     {% endif %}
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    <div class="contentwrapper">
+      {% include "./partials/navbar.html" %}
 
-    {{ content | safe }}
+      <div class="maincontent">
+        {{ content | safe }}
+      </div>
 
-    {% include "./partials/footer.html" %}
+      {% include "./partials/footer.html" %}
+    </div>
 
     <script src="/static/js/alpine.js"></script>
 
@@ -45,6 +49,5 @@
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
-
   </body>
 </html>

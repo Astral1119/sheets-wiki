@@ -6,5 +6,4 @@ items:
   - type: page
     page: adding-comments-to-sheets-wiki  
 ---
-
 Functions are pretty neat.

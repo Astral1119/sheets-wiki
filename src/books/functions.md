@@ -13,5 +13,4 @@ items:
     pages:
       - levenshtein-distance
 ---
-
 Functions are pretty neat.
