@@ -8,12 +8,11 @@ tags:
   - advice
 ---
 # Planned Features (listed in order of priority)
-- [ ] Markdown overhaul
-- [ ] Navigation tools (BookStack structure)
-- [ ] Personal Pages
-- [ ] Theming and CSS overhaul
-- [ ] Shift CMS backend off of Netlify
-- [ ] [Add PWA Stuff](https://web.dev/articles/pwa-checklist?utm_source=lighthouse&utm_medium=node)
+- Mobile support
+- Personal Pages
+- Theming and CSS overhaul
+- Shift CMS backend off of Netlify
+- [Add PWA Stuff](https://web.dev/articles/pwa-checklist?utm_source=lighthouse&utm_medium=node)
 
 # Proposed Features
 - Empty for now
