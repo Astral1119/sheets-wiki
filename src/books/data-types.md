@@ -10,5 +10,7 @@ items:
     name: LAMBDA Types
     pages:
       - lambda-udts
+      - lambda-data-structures
+      - old-lambda-udts
 ---
 Lorem ipsum
