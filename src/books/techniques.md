@@ -11,7 +11,7 @@ items:
   - type: page
     page: lambda-recursion
   - type: page
-    page: lus
+    page: lambda-update-suppression
   - type: page
     page: query-smush
   - type: page
