@@ -5,6 +5,7 @@ author: Aliafriend
 date: 2024-04-24T12:49:06.931Z
 tags:
   - tutorial
+short: AND()/OR() Alt Method
 ---
 Typically when we use AND()/OR() in sheets we write each condition and have to repeat ourselves if it's one cell being asked to meet multiple criteria. For example
 
@@ -49,4 +50,4 @@ IF(SORT(OR(A1=conditionals)),"Pass","Warning")
 )
 ```
 
-For more information on documenting formulas see [Here](https://sheets.wiki/blog/posts/documenting-formulas/)
+For more information on documenting formulas see [Here](https://sheets.wiki/books/techniques/documenting-formulas/)
