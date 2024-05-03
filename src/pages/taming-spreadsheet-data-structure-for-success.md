@@ -5,6 +5,7 @@ author: Aliafriend
 date: 2024-04-02T16:08:05.151Z
 tags:
   - tutorial
+short: "Taming Spreadsheet Data: Structure for Success"
 ---
 New spreadsheet users often struggle with data organization. We encounter data in various formats daily, but understanding its underlying structure is key. Poor data structuring creates headaches later when simple tasks like analysis or filtering become cumbersome. By prioritizing a well-organized structure, even if it appears less visually appealing initially, you'll save time and frustration in the long run.
 
@@ -69,7 +70,7 @@ This formula easily calculates the sum for the week or any date range you specif
 =QUERY(A:C,"SELECT Sum(C) WHERE B ='Food'")
 ```
 
-For more information see \[[query]]
+For more information see [query](https://sheets.wiki/pages/query/)
 
 and
 
