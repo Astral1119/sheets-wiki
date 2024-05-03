@@ -8,6 +8,9 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
 ---
 
 {%- for item in pagination.items %}
+
+    {# setting variables for use later on #}
+
     {% set book = item.bookTitle %}
     {% set bookdata = collections.datafp.get("books", book | slugify)[0] %}
     {% set list = bookdata.data.items %}
@@ -19,6 +22,8 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
         
         <main class="pagecontainer">
             {% set current = collections.datafp.get("pages", item.page)[0] %}
+
+            {# header stuff #}
 
             <div class="pb-5 mb-5 border-b border-gray-100">
                     <h1 class="font-bold text-5xl">{{current.data.title}}</h1>
@@ -35,8 +40,12 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
                     <a href="/books/{{ book | slugify }}">To book home</a>
                 </div>
 
+                {# actual content #}
+
                 <article class="prose lg:prose-xl my-4 mx-auto">
                     {{ current.content | wrapTableInDiv | safe }} </article>
+
+                {# previous and next page buttons #}
 
                 <nav class="pagination">
                 {% if pagination.previousPageLink %}
@@ -50,6 +59,8 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
                     {% endif %}
                 {% endif %}
                 </nav>
+
+                {# comments #}
 
                 <script src="https://utteranc.es/client.js"
                     repo="Astral1119/sheets-wiki"
