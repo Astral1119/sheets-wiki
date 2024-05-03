@@ -48,53 +48,13 @@ iframe {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   display: block;
+  z-index: 5;
 }
 
 /* Shelf cards */
 
 .shelf.third {
   grid-template-columns: 1fr 1fr 1fr
-}
-
-@media screen and (max-width: 880px) {
-  .shelf.third:not(.no-break) {
-      grid-template-columns:1fr 1fr
-  }
-
-  .shelf.half:not(.no-break),.shelf.left-focus:not(.no-break),.shelf.right-focus:not(.no-break) {
-      grid-template-columns: 1fr
-  }
-
-  .shelf.half.collapse-xs {
-      grid-template-columns: 1fr 1fr
-  }
-
-  .shelf.gap-xl {
-      grid-column-gap: 16px;
-      grid-row-gap: 16px
-  }
-
-  .shelf.right-focus.reverse-collapse>*:nth-child(2) {
-      order: 0
-  }
-
-  .shelf.right-focus.reverse-collapse>*:nth-child(1) {
-      order: 1
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .shelf.third:not(.no-break) {
-      grid-template-columns:1fr
-  }
-}
-
-@media screen and (min-width: 600px)and (max-width: 880px) {
-  #home-default>.shelf.third {
-      display:block;
-      columns: 2;
-      column-gap: 24px !important
-  }
 }
 
 .shelf {
@@ -153,14 +113,81 @@ iframe {
   color: #007bff; /* Change color on hover */
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+.pagecontainer {
+  width: calc(90% - 280px); /* Adjust the width to leave space for the sidebar */
+  min-width: 200px; /* Set a minimum width for the main content area */
+  margin-left: 280px; /* Adjust margin to keep content away from the sidebar */
+  float: left;
+  left: 0;
 }
 
-@media screen and (max-width: 300px) {
-  .sidebar {width: 0}
+@media screen and (max-width: 880px) {
+  .shelf.third:not(.no-break) {
+      grid-template-columns:1fr 1fr
+  }
+
+  .shelf.half:not(.no-break),.shelf.left-focus:not(.no-break),.shelf.right-focus:not(.no-break) {
+      grid-template-columns: 1fr
+  }
+
+  .shelf.half.collapse-xs {
+      grid-template-columns: 1fr 1fr
+  }
+
+  .shelf.gap-xl {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px
+  }
+
+  .shelf.right-focus.reverse-collapse>*:nth-child(2) {
+      order: 0
+  }
+
+  .shelf.right-focus.reverse-collapse>*:nth-child(1) {
+      order: 1
+  }
+}
+
+@media screen and (min-width: 600px)and (max-width: 880px) {
+  #home-default>.shelf.third {
+      display:block;
+      columns: 2;
+      column-gap: 24px !important
+  }
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 0; /* Hides the sidebar on smaller screens */
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+  }
+
+  .self-start {
+    display: none; /* Hide the sidebar container on smaller screens */
+  }
+
+  /* Adjust content layout when sidebar is hidden */
+  .pagecontainer {
+    width: calc(100% - 40px); /* Adjust the value to leave space for padding */
+    margin-left: 20px; /* Add left margin to keep content away from the hidden sidebar */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shelf.third:not(.no-break) {
+      grid-template-columns:1fr
+  }
+}
+
+.table-wrapper {
+  width: 100% !important;
+  overflow-x: scroll; 
 }
 
 

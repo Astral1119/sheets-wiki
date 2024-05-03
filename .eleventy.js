@@ -243,6 +243,14 @@ module.exports = function (eleventyConfig) {
     };
   });
 
+  eleventyConfig.addFilter("wrapTableInDiv", function(content) {
+    // Regular expression to identify Markdown tables
+    const tableRegex = /<table>([\s\S]+?)<\/table>/g;
+
+    // Wrap each table match in a div with class "table-wrapper"
+    return content.replace(tableRegex, '<div class="table-wrapper">$&</div>');
+  });
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

@@ -12,16 +12,15 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
     {% set bookdata = collections.datafp.get("books", book | slugify)[0] %}
     {% set list = bookdata.data.items %}
 
-    <div class="grid grid-cols-7">
+    <div>
         <aside class="self-start sticky top-0 col-span-1">
             {% include "../_includes/partials/sidebar.njk" %}
         </aside>
         
-        <main class="col-span-6">
+        <main class="pagecontainer">
             {% set current = collections.datafp.get("pages", item.page)[0] %}
 
-            <div class="container max-w-4xl mt-6 px-6">
-                <div class="pb-5 mb-5 border-b border-gray-100">
+            <div class="pb-5 mb-5 border-b border-gray-100">
                     <h1 class="font-bold text-5xl">{{current.data.title}}</h1>
                     <p class="text-center text-base leading-6 font-medium text-gray-500">
                         {% if current.data.author %}
@@ -33,10 +32,24 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
                             <time> {{ current.data.date | readableDate }} </time>
                         {% endif %}
                     </p>
+                    <a href="/books/{{ book | slugify }}">To book home</a>
                 </div>
 
                 <article class="prose lg:prose-xl my-4 mx-auto">
-                    {{ current.content | safe }} </article>
+                    {{ current.content | wrapTableInDiv | safe }} </article>
+
+                <nav class="pagination">
+                {% if pagination.previousPageLink %}
+                    {% if pagination.previousPageHref.split('/')[2] === book | slugify %}
+                        <a class="pagination__item" href="{{ pagination.previousPageHref}}">Previous</a>
+                    {% endif %}
+                {% endif %}
+                {% if pagination.nextPageLink %}
+                    {% if pagination.nextPageHref.split('/')[2] === book | slugify %}
+                        <a class="pagination__item" href="{{ pagination.nextPageHref}}">Next</a>
+                    {% endif %}
+                {% endif %}
+                </nav>
 
                 <script src="https://utteranc.es/client.js"
                     repo="Astral1119/sheets-wiki"

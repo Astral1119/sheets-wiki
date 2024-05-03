@@ -8,7 +8,6 @@ tags:
   - advice
 ---
 # Planned Features (listed in order of priority)
-- Mobile support
 - Personal Pages
 - Theming and CSS overhaul
 - Shift CMS backend off of Netlify
@@ -16,3 +15,7 @@ tags:
 
 # Proposed Features
 - Empty for now
+
+# Finished Features
+- Mobile support
+- [BookStack](https://www.bookstackapp.com/)-esque Hierarchy
