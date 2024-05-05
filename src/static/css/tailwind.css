@@ -51,6 +51,14 @@ iframe {
   z-index: 5;
 }
 
+.footer {
+  overflow: hidden;
+  background-color:#ffffff;
+  width: 100%;
+  display: block;
+  z-index:5;
+}
+
 /* Shelf cards */
 
 .shelf.third {
