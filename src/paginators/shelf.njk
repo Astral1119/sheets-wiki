@@ -4,7 +4,7 @@ pagination:
   data: shelves
   size: 1
   alias: shelf
-permalink: "shelves/{{ shelf.name | slugify }}/index.html"
+permalink: "{{ shelf.name | slugify }}/index.html"
 ---
 
 {%- for item in pagination.items %}
