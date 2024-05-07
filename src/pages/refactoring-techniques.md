@@ -1,7 +1,7 @@
 ---
-title: Refactoring Techniques
-short: Refactoring Techniques
-description: Techniques to make your formulas more re-usable and readable.
+title: LAMBDA Refactoring
+short: LAMBDA Refactoring
+description: Refactoring Formulas using LAMBDA
 author: Aliafriend
 date: 2024-05-07T14:55:13.404Z
 ---
