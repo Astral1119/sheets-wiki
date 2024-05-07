@@ -15,6 +15,8 @@ items:
   - type: page
     page: query-smush
   - type: page
+    page: refactoring-techniques
+  - type: page
     page: unpivotting
   - type: page
     page: zero-elements
