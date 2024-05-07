@@ -11,11 +11,11 @@ items:
   - type: page
     page: lambda-recursion
   - type: page
+    page: lambda-refactoring
+  - type: page
     page: lambda-update-suppression
   - type: page
     page: query-smush
-  - type: page
-    page: refactoring-techniques
   - type: page
     page: unpivotting
   - type: page
