@@ -31,3 +31,8 @@ We can already see each element present, but there's also a number of junk chara
 And that's it! These are all of the components, including the ZWJ characters I mentioned before. To get the original glyph, just use `JOIN` and voila! A full decomposition/composition pipeline for Unicode glyphs.
 
 You can find a link to a sheet showing the full process [here](https://docs.google.com/spreadsheets/d/1jtw8Y6U9J8jXd3V82I6gCiJKZf3U4YjCtab2DhgCX5Y/edit?usp=sharing).
+
+Additional sources:
+- [Decimal codes for Unicode blocks](https://www.ssec.wisc.edu/~tomw/java/unicode.html)
+- [Information about emoji relationships](https://crissov.github.io/unicode-proposals/relationships.html)
+- [Wikipedia page for emoji modifiers](https://en.wikipedia.org/wiki/Miscellaneous_Symbols_and_Pictographs#Emoji_modifiers)

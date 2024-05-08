@@ -14,9 +14,10 @@
       document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
     </script>
 
-    <title>
-      {{title}}
-    </title>
+    {% set current = collections.datafp.get("pages", bookPage.page)[0] %}
+
+    <title>{{ shelf.name | default(current.data.short) | default(current.data.title) | default(title) | safe }}</title>
+
     {% if description %}
       <meta name="description" content="{{description}}"/>
       <meta property="og:description" content="{{description}}"/>
