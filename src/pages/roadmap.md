@@ -9,7 +9,7 @@ tags:
 ---
 # Planned Features (listed in order of priority)
 - Personal Pages
-- Theming and CSS overhaul
+- Theming and CSS overhaul (get off Tailwind)
 - Shift CMS backend off of Netlify
 - [Add PWA Stuff](https://web.dev/articles/pwa-checklist?utm_source=lighthouse&utm_medium=node)
 
