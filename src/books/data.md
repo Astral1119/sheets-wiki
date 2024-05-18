@@ -7,4 +7,4 @@ items:
   - type: page
     page: flookup
 ---
-Stuff here
+Named Functions in this book focus on data analysis.
