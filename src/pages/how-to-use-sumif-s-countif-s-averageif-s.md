@@ -1,6 +1,6 @@
 ---
 title: How to use SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
-short: How to use SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
+short: SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
 description: How to use SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
 author: Aliafriend
 date: 2024-05-21T14:15:58.776Z
