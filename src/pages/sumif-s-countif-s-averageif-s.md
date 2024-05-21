@@ -1,5 +1,5 @@
 ---
-title: How to use SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
+title: SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
 short: SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
 description: How to use SUMIF(s)-COUNTIF(s)-AVERAGEIF(s)
 author: Aliafriend
