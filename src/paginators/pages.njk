@@ -37,28 +37,30 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
                             <time> {{ current.data.date | readableDate }} </time>
                         {% endif %}
                     </p>
-                    <a href="/books/{{ book | slugify }}">To book home</a>
+
+                    {# previous and next page buttons #}
+
+                    <nav class="pagination text-center">
+                        {% if pagination.previousPageLink %}
+                            {% if pagination.previousPageHref.split('/')[2] === book | slugify %}
+                                <a class="pagination__item" href="{{ pagination.previousPageHref}}">Previous</a>
+                            {% endif %}
+                        {% endif %}
+
+                        <a class="pagination__item" href="/books/{{ book | slugify }}">To book home</a>
+                        
+                        {% if pagination.nextPageLink %}
+                            {% if pagination.nextPageHref.split('/')[2] === book | slugify %}
+                                <a class="pagination__item" href="{{ pagination.nextPageHref}}">Next</a>
+                            {% endif %}
+                        {% endif %}
+                    </nav>
                 </div>
 
                 {# actual content #}
 
                 <article class="prose lg:prose-xl my-4 mx-auto">
                     {{ current.content | wrapTableInDiv | safe }} </article>
-
-                {# previous and next page buttons #}
-
-                <nav class="pagination">
-                {% if pagination.previousPageLink %}
-                    {% if pagination.previousPageHref.split('/')[2] === book | slugify %}
-                        <a class="pagination__item" href="{{ pagination.previousPageHref}}">Previous</a>
-                    {% endif %}
-                {% endif %}
-                {% if pagination.nextPageLink %}
-                    {% if pagination.nextPageHref.split('/')[2] === book | slugify %}
-                        <a class="pagination__item" href="{{ pagination.nextPageHref}}">Next</a>
-                    {% endif %}
-                {% endif %}
-                </nav>
 
                 {# comments #}
 

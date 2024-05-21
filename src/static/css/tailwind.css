@@ -198,6 +198,11 @@ iframe {
   overflow-x: scroll; 
 }
 
+.pagination__item {
+  border: 1px;
+  padding: 20px;
+}
+
 
 /* Syntax Highlighting*/
 
