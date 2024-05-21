@@ -5,7 +5,7 @@ author: Astral Café
 date: 2024-05-18T16:24:16.883Z
 items:
   - type: page
-    page: how-to-use-sumif-s-countif-s-averageif-s
+    page: sumif-s-countif-s-averageif-s
   - type: page
     page: query
   - type: chapter
