@@ -12,7 +12,7 @@ permalink: "books/{{ title | slugify }}/index.html"
 
 <main class="pagecontainer">
 
-        <h1>{{ title }}</h1>
+        <h1 id="title">{{ title }}</h1>
 
         <article class="prose lg:prose-xl my-4 mx-auto">
                 {{ content | safe }}

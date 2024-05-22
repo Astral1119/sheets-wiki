@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Your Custom CSS Goes here*/
+/* Main content layout */
+
+.pagecontainer {
+  width: calc(90% - 280px); /* Adjust the width to leave space for the sidebar */
+  min-width: 200px; /* Set a minimum width for the main content area */
+  margin-left: 280px; /* Adjust margin to keep content away from the sidebar */
+  float: left;
+  left: 0;
+}
 
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
@@ -10,6 +18,11 @@ h1 {
 
 h3 {
   @apply text-2xl font-bold mb-3;
+}
+
+.table-wrapper {
+  width: 100% !important;
+  overflow-x: scroll; 
 }
 
 /* Google Sheets embeds */
@@ -88,8 +101,10 @@ iframe {
   transition: border-color ease-in-out 120ms,box-shadow ease-in-out 120ms;
 }
 
+/* Sidebar */
+
 .sidebar {
-  width: 250px; /* Adjust width as needed */
+  width: 250px;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -121,13 +136,8 @@ iframe {
   color: #007bff; /* Change color on hover */
 }
 
-.pagecontainer {
-  width: calc(90% - 280px); /* Adjust the width to leave space for the sidebar */
-  min-width: 200px; /* Set a minimum width for the main content area */
-  margin-left: 280px; /* Adjust margin to keep content away from the sidebar */
-  float: left;
-  left: 0;
-}
+
+/* Media Query for smaller screens */
 
 @media screen and (max-width: 880px) {
   .shelf.third:not(.no-break) {
@@ -164,7 +174,6 @@ iframe {
   }
 }
 
-/* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .sidebar {
     width: 0; /* Hides the sidebar on smaller screens */
@@ -193,10 +202,7 @@ iframe {
   }
 }
 
-.table-wrapper {
-  width: 100% !important;
-  overflow-x: scroll; 
-}
+/* Page paginators */
 
 .pagination {
   grid-template-columns: [one] 33% [two] auto [three] 33% [end];
@@ -214,10 +220,29 @@ iframe {
   grid-column: 2;
 }
 
-
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+#scrollButton {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#scrollButton:hover {
+  background-color: #555;
 }
