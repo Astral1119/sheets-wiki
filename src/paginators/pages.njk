@@ -40,21 +40,21 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
 
                     {# previous and next page buttons #}
 
-                    <nav class="pagination text-center">
+                    <div class="pagination">
                         {% if pagination.previousPageLink %}
                             {% if pagination.previousPageHref.split('/')[2] === book | slugify %}
                                 <a class="pagination__item" href="{{ pagination.previousPageHref}}">Previous</a>
                             {% endif %}
                         {% endif %}
 
-                        <a class="pagination__item" href="/books/{{ book | slugify }}">To book home</a>
+                        <a class="pagination__item book_home" href="/books/{{ book | slugify }}">To book home</a>
                         
                         {% if pagination.nextPageLink %}
                             {% if pagination.nextPageHref.split('/')[2] === book | slugify %}
                                 <a class="pagination__item" href="{{ pagination.nextPageHref}}">Next</a>
                             {% endif %}
                         {% endif %}
-                    </nav>
+                    </div>
                 </div>
 
                 {# actual content #}

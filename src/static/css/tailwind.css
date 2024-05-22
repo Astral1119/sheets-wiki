@@ -198,9 +198,20 @@ iframe {
   overflow-x: scroll; 
 }
 
+.pagination {
+  grid-template-columns: [one] 33% [two] auto [three] 33% [end];
+  display: grid;
+}
+
 .pagination__item {
   border: 1px;
   padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.book_home {
+  grid-column: 2;
 }
 
 
