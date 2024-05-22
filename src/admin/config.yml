@@ -64,7 +64,7 @@ collections:
       - label: "Shelves"
         name: "shelves"
         widget: "list"
-        collapsed: "true"
+        collapsed: true
         field: {label: Shelf, name: shelf, widget: string}
       - { label: "Body", name: "body", widget: "markdown" }
       - label: Structure
