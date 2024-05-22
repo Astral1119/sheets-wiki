@@ -227,6 +227,8 @@ body pre[class*="language-"] {
   @apply bg-gray-800;
 }
 
+/* Scroll Button */
+
 #scrollButton {
   display: none; /* Hidden by default */
   position: fixed;

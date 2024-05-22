@@ -4,8 +4,6 @@ items:
     url: "/pages"
   - text: All Books
     url: "/books"
-  - text: About
-    url: "/about"
   - text: Docs
     url: "/documentation"
   - text: Blog
