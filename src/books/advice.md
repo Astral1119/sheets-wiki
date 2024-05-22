@@ -3,6 +3,8 @@ title: Advice
 description: Advice
 author: Aliafriend
 date: 2024-05-03T13:07:34.303Z
+shelves:
+  - Blog
 items:
   - type: page
     page: an-alternative-approach-to-using-and-or
