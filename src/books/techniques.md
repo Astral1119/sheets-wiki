@@ -12,10 +12,12 @@ items:
     page: documenting-formulas
   - type: chapter
     name: LAMBDA Techniques
-    pages:
-      - lambda-recursion
-      - lambda-refactoring
-      - lambda-update-suppression
+    - type: page
+      page: lambda-recursion
+    - type: page
+      page: lambda-refactoring
+    - type: page
+      page: lambda-update-suppression
   - type: page
     page: query-smush
   - type: page
