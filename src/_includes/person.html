@@ -5,15 +5,17 @@ prism: true
 
 <div class="container max-w-4xl mt-6  px-6">
     <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="font-bold text-5xl">{{name}}</h1>
+        <div style="display: grid; justify-content: center; align-items: center;">
+            <img src="{{pfp}}" alt="Avatar" style="border-radius: 50%; width: 15rem; padding-bottom: 20px;">
+            <h1 class="font-bold text-5xl">{{ name }}</h1>
+        </div>
         <p class="text-center text-base leading-6 font-medium text-gray-500">
-            {% else %}
             <time> {{ date | readableDate }} </time>
         </p>
-
     </div>
+    
     <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content }} </article>
+        {{ content | safe }} </article>
 
     <script src="https://utteranc.es/client.js"
         repo="Astral1119/sheets-wiki"

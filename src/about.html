@@ -13,6 +13,6 @@ path: home
   </article>
   <h1>Writers</h1>
   {%- for person in collections.people %}
-    <a href="/people/{{ person.name | slugify }}/'">{{ person.data.name }}</a>
+    <a href="/people/{{ person.data.name | slugify }}">{{ person.data.name }}</a>
   {% endfor -%}
 </div>
