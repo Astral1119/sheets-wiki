@@ -31,7 +31,7 @@ permalink: "books/{{ bookPage.bookTitle | slugify }}/{% if bookPage.chapterName 
                         {% if current.data.author %}
                             <time> {{ current.data.date | readableDate }}
                                 by
-                                <a>{{ current.data.author }}</a>
+                                <a href="/people/{{ current.data.author | slugify }}/">{{ current.data.author }}</a>
                             </time>
                         {% else %}
                             <time> {{ current.data.date | readableDate }} </time>
