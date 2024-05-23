@@ -92,7 +92,6 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{short | slugify}}"
     preview_path: "{{slug}}"
     sortable_fields: ['commit_date', 'short', 'commit_author']
 
