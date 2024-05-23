@@ -46,7 +46,6 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
   
-  
   - name: "books"
     label: "Books"
     folder: "src/books"
@@ -86,19 +85,20 @@ collections:
                 widget: list
                 field: { label: Page, name: page, widget: string }
                 min: 1
-  - name: "people"
-      label: "People"
-      folder: "src/people"
-      create: true
-      editor:
-        preview: false
-      slug: "{{short | slugify}}"
-      preview_path: "{{slug}}"
-      sortable_fields: ['commit_date', 'short', 'commit_author']
 
-      fields:
-        - { label: "Name", name: "name", widget: "string" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Profile Picture", name: "pfp", widget: "image" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "people"
+    label: "People"
+    folder: "src/people"
+    create: true
+    editor:
+      preview: false
+    slug: "{{short | slugify}}"
+    preview_path: "{{slug}}"
+    sortable_fields: ['commit_date', 'short', 'commit_author']
+
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Profile Picture", name: "pfp", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
