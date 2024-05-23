@@ -230,6 +230,30 @@ module.exports = function (eleventyConfig) {
     return bookPages;
   });
 
+  
+  eleventyConfig.addCollection("shelves", function(collection) {
+    let shelves = {};
+
+    collection.getFilteredByTag("books").forEach(function(item) {
+        item.data.shelves.forEach(shelf => {
+            if (shelves[shelf]) {
+                shelves[shelf].push({
+                    name: item.data.title,
+                    description: item.data.description
+                });
+            } else {
+                shelves[shelf] = [{  // Initialize shelves[shelf] as an array
+                    name: item.data.title,
+                    description: item.data.description
+                }];
+            }
+        });
+    });
+
+    return shelves; // Return the shelves object
+  });
+
+
   eleventyConfig.addCollection("datafp", function(collectionApi) {
     return {
         getAll: function() {

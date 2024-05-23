@@ -3,6 +3,8 @@ title: Techniques
 description: Book of Techniques
 author: Aliafriend
 date: 2024-05-03T13:17:33.012Z
+shelves:
+  - Documentation
 items:
   - type: page
     page: an-alternative-approach-to-using-and-or

@@ -3,6 +3,8 @@ title: Functions
 description: The building blocks of formulae.
 author: Astral Café
 date: 2024-05-18T16:24:16.883Z
+shelves:
+  - Documentation
 items:
   - type: page
     page: sumif-s-countif-s-averageif-s

@@ -3,6 +3,8 @@ title: Meta
 description: Meta posts for sheets.wiki.
 author: Astral Café
 date: 2024-05-18T16:26:18.218Z
+shelves:
+  - Blog
 items:
   - type: page
     page: roadmap
