@@ -1,20 +1,20 @@
 <button onclick="jump()" id="scrollButton">Scroll to Top</button>
+
 <script>
     // Get the button:
-    let mybutton = document.getElementById("scrollBtn");
+    let scrollButton = document.getElementById("scrollButton");
+    let scrollContainer = document.getElementsByClassName("maincontent")[0];
 
-    document.addEventListener('scroll', function() {
-        const button = document.getElementById('scrollButton');
-        if (window.scrollY > 20) {
-            button.style.display = 'block';
+    scrollContainer.addEventListener('scroll', function() {
+        if (scrollContainer.scrollTop > 100) {
+            scrollButton.style.display = 'block';
         } else {
-            button.style.display = 'none';
+            scrollButton.style.display = 'none';
         }
     });
 
-    // When the user clicks on the button, scroll to the top of the document
+    // When the user clicks on the button, scroll to the top of the scrollContainer
     function jump() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        scrollContainer.scrollTop = 0; // For the scrollable container
     }
 </script>
