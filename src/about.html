@@ -11,4 +11,8 @@ path: home
     <p>While Google Sheets has had strong documentation and a thriving blogging community since its inception, it has never had a dedicated wiki. This project aims to remedy that, containing expert-made documentation and in-depth information about technical aspects not found elsewhere.</p>
     <p>This site is currently being maintained by Astral. If you would like to contribute or have any questions about this site, please reach out to astral@astral.cafe or at astral.cafe on Discord.</p>
   </article>
+  <h1>Writers</h1>
+  {%- for person in collections.people %}
+    {{ person.name }}
+  {% endfor -%}
 </div>
