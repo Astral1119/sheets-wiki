@@ -282,4 +282,5 @@ td {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   padding: 0.15em;
   border-radius: 0.5rem;
+  text-decoration: inherit;
 }
