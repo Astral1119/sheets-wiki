@@ -197,12 +197,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("bookPages", function(collection) {
     // Initialize an empty array to store pages
     let bookPages = [];
-
     // Loop through each item in the 'books' collection
     collection.getFilteredByTag("books").forEach(book => {
         // Accessing the items array in the frontmatter of each book
         let bookItems = book.data.items;
-
         // Loop through each item in the 'items' array
         bookItems.forEach(item => {
             // Check if the item is a page
@@ -225,7 +223,6 @@ module.exports = function (eleventyConfig) {
             }
         });
     });
-
     // Return the final array containing all pages along with their book and chapter info
     return bookPages;
   });
@@ -272,7 +269,7 @@ module.exports = function (eleventyConfig) {
     const tableRegex = /<table>([\s\S]+?)<\/table>/g;
 
     // Wrap each table match in a div with class "table-wrapper"
-    return content.replace(tableRegex, '<div class="table-wrapper">$&</div>');
+    return content;
   });
 
   // Let Eleventy transform HTML files as nunjucks
