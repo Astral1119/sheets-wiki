@@ -7,6 +7,10 @@ shelves:
   - Documentation
 items:
   - type: page
+    page: type-coercion
+  - type: page
+    page: booleans
+  - type: page
     page: arrays
   - type: chapter
     name: LAMBDA Types
