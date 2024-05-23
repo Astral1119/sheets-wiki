@@ -10,7 +10,7 @@ prism: true
             {% if author %}
                 <time> {{ date | readableDate }}
                     by
-                    <a>{{ author }}</a>
+                    <a href="/people/{{ author | slugify }}/">{{ author }}</a>
                 </time>
             {% else %}
                 <time> {{ date | readableDate }} </time>
