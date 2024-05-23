@@ -10,14 +10,12 @@ items:
     page: an-alternative-approach-to-using-and-or
   - type: page
     page: documenting-formulas
-  - type: chapter
-    name: LAMBDA Techniques
-    - type: page
-      page: lambda-recursion
-    - type: page
-      page: lambda-refactoring
-    - type: page
-      page: lambda-update-suppression
+  - type: page
+    page: lambda-recursion
+  - type: page
+    page: lambda-refactoring
+  - type: page
+    page: lambda-update-suppression
   - type: page
     page: query-smush
   - type: page
