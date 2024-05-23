@@ -16,8 +16,11 @@ items:
       - lambda-recursion
       - lambda-refactoring
       - lambda-update-suppression
-  - type: page
-    page: query-smush
+  - type: chapter
+    name: QUERY Techniques
+    pages:
+      - query-smush
+      - query-arithmetic
   - type: page
     page: unpivotting
   - type: page

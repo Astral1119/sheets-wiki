@@ -8,9 +8,9 @@ tags:
   - function
 ---
 # Introduction
-The [QUERY](https://support.google.com/docs/answer/3093343?hl=en) function allows the user to make SQL-lite queries using the [Google Visualization API Query Language](https://developers.google.com/chart/interactive/docs/querylanguage) on arrays. This article details the exact specifications of QUERY in Google Sheets. For relevant techniques, see [[QUERY Smush]] and [[QUERY Arithmetic]]. For an introduction to QUERY, see [[QUERY Basics]].
+The [QUERY](https://support.google.com/docs/answer/3093343?hl=en) function allows the user to make SQL-lite queries using the [Google Visualization API Query Language](https://developers.google.com/chart/interactive/docs/querylanguage) on arrays. This article details the exact specifications of QUERY in Google Sheets. For relevant techniques, see [QUERY Smush](https://sheets.wiki/pages/query-smush/) and [QUERY Arithmetic](https://sheets.wiki/pages/query-arithmetic/).
 # Function Syntax
-```xls
+```haskell
 QUERY(data, [query], [headers])
 ```
 
@@ -23,9 +23,9 @@ QUERY(data, [query], [headers])
 
 * `headers` - The number of header rows at the top of the `data`. If omitted or set to `-1`, the value is guessed based on the content of `data`.
 	- It is currently unclear how QUERY guesses the number of header rows in `data`. Therefore, it is recommended that you always submit a header argument.
-	- Header rows are combined by joining with a delimiter `" "`. See [[QUERY Smush]] for the related technique.
+	- Header rows are combined by joining with a delimiter `" "`. See [QUERY Smush](https://sheets.wiki/pages/query-smush/) for the related technique.
 # Query Syntax
-```xls
+```haskell
 "[select] [where] [group by] [pivot by] [order by] [skipping] [limit] [offset] [label] [format] [options]"
 ```
 
@@ -54,7 +54,7 @@ Language clauses determine how information is gathered and processed.
 Each clause takes different arguments and has vastly different effects; there is no singular construction applicable to each.
 ## Select
 
-```xls
+```sql
 select Col1
 select 1
 select Col1, sum(Col2)
@@ -64,7 +64,7 @@ The `select` clause includes columns, aggregates, and literals in the output. Te
 
 The `select` clause additionally accepts the `"*"` term, signifying 'all' or 'everything.' If an aggregate is selected, a `group by` clause is mandatory.
 ## Where
-```xls
+```sql
 select Col1 where Col1 is not null
 select Col1, Col2 where Col1 <> 0 and Col2 <> 0
 ```
@@ -86,7 +86,7 @@ There are also additional keywords exclusive to the `where` clause.
 <sup>1</sup> Regular expressions in QUERY are more extensive than the [[REGEX functions]], constituting a full implementation.
 <sup>2</sup> There are two valid wildcards: `%` signifies zero or more arbitrary characters, and `_` represents exactly one of any character.
 ## Group By
-```xls
+```sql
 select Col1, sum(Col2) group by Col1
 ```
 
@@ -96,7 +96,7 @@ If you use a `group` by clause, then every column listed in the select clause mu
 
 This clause is mandatory when selecting aggregation functions.
 ## Pivot
-```xls
+```sql
 select Col1, sum(Col2) group by Col1 pivot Col3
 ```
 
@@ -106,9 +106,9 @@ If you use a `pivot` clause, then _every column_ listed in the `select` cla
 
 You can pivot by multiple columns. The resulting table has columns for every unique combination of those columns.
 
-There is no native [[Unpivotting|unpivot]] clause or function. 
+There is no native [unpivot](https://sheets.wiki/pages/unpivotting/) clause or function. 
 ## Order By
-```xls
+```sql
 select Col1 order by Col2 desc
 ```
 
@@ -116,26 +116,26 @@ The `order by` clause is used to sort the rows by the values in specified col
 
 Items in an `order by` clause can be column identifiers, or the output of [aggregation functions](https://developers.google.com/chart/interactive/docs/querylanguage#aggregation_functions), [scalar functions](https://developers.google.com/chart/interactive/docs/querylanguage#scalar_functions), or [operators](https://developers.google.com/chart/interactive/docs/querylanguage#operators).
 ## Skipping
-```xls
+```sql
 select Col1 skipping 2
 ```
 
-The `skipping` clause is used to select every *n*th row, starting from row 1 (i.e. row 1 is always included). This also means that `skipping 1` has no effect. If an [[QUERY#Offset|offset]] clause is used, `skipping` is applied first.
+The `skipping` clause is used to select every *n*th row, starting from row 1 (i.e. row 1 is always included). This also means that `skipping 1` has no effect. If an [`offset`](#offset) clause is used, `skipping` is applied first.
 ## Limit
 
-```xls
+```sql
 select Col1 limit 5
 ```
 
 The `limit` clause is used to limit the number of returned rows. It can only accept integers.
 ## Offset
-```xls
+```sql
 select Col1 offset 5
 ```
 
 The `offset` clause is used to skip a given number of first rows. If a [`limit`](#limit) clause is used, `offset` is applied first: for example, `limit 15 offset 30` returns rows 31 through 45.
 ## Label
-```xls
+```sql
 select Col1 label Col1 'Name'
 ```
 
@@ -143,13 +143,13 @@ The `label` clause is used to set the label for one or more columns. Note that
 
 Items in a `label` clause can be column identifiers, or the output of [aggregation functions](#aggregation-functions), [scalar functions](#scalar-functions), or [operators](#arithmetic-operators).
 ## Format
-```xls
+```sql
 select Col1 format Col1 'mmm'
 ```
 
 The `format` clause is used to specify a formatted value for cells in one or more columns. The returned data should include both an actual value and a formatted value for each cell in a formatted column.
 ## Options
-```xls
+```sql
 select Col1 options no_values
 ```
 

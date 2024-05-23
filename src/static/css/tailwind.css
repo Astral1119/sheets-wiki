@@ -43,8 +43,15 @@ iframe {
   flex-direction: column;
 }
 
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
 .maincontent {
   margin-top: 100px;
+  height: 100%;
+  overflow: auto;
 }
 
 .justify-center {
@@ -134,6 +141,10 @@ iframe {
 
 .sidebar-list li a:hover {
   color: #007bff; /* Change color on hover */
+}
+
+.chapteritems {
+  margin-left: 20px;
 }
 
 
@@ -247,4 +258,28 @@ body pre[class*="language-"] {
 
 #scrollButton:hover {
   background-color: #555;
+}
+
+td {
+  border-right: solid 1px var(--tw-prose-td-borders) !important;
+  border-left: solid 1px var(--tw-prose-td-borders) !important;
+  border-bottom: solid 1px var(--tw-prose-td-borders) !important;
+  padding-inline-start: 0.6666667em !important;
+  padding-inline-end: 0.6666667em !important;
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
+  content: ""
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+  content: ""
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  --tw-bg-opacity: 1;
+  color: #e5e7eb;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  padding: 0.15em;
+  border-radius: 0.5rem;
 }
