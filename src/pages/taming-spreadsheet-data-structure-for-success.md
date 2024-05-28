@@ -14,7 +14,7 @@ Proper data structure leads to better data ingestion, smoother experience, and e
 Let's look at an example.
 
 | A                | B             | C         |     |
-| :----------------: | :-------------: | :---------: | :---: |
+| :----------------: | :-------------: | :---------: | 
 | Week of 4/1/2024 |               |           |     |
 | Monday           |               |           |     |
 |                  | Gas           | \-$25.00  |     |
