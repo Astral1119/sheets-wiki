@@ -13,30 +13,30 @@ Proper data structure leads to better data ingestion, smoother experience, and e
 
 Let's look at an example.
 
-| A                | B             | C         |     |
+| A                | B             | C         |
 | :----------------: | :-------------: | :---------: | 
-| Week of 4/1/2024 |               |           |     |
-| Monday           |               |           |     |
-|                  | Gas           | \-$25.00  |     |
-|                  | Food          | \-$10.00  |     |
-| Tuesday          |               |           |     |
-|                  | Car           | \-$50.00  |     |
-| Wednesday        |               |           |     |
-|                  | Birthday Gift | \-$26.00  |     |
-|                  | Food          | \-$15.00  |     |
-| Thursday         |               |           |     |
-|                  | Paycheck      | $400.00   |     |
-| Friday           |               |           |     |
-|                  | Movies        | \-$30.00  |     |
-|                  | Candy         | \-$10.00  |     |
-| Saturday         |               |           |     |
-|                  | Groceries     | \-$100.00 |     |
-| Sunday           |               |           |     |
-|                  | Video Game    | \-$60.00  |     |
-| Total            |               | $74.00    |     |
-|                  |               |           |     |
-|                  |               |           |     |
-| Week 1           |               |           |     |
+| Week of 4/1/2024 |               |           |
+| Monday           |               |           |
+|                  | Gas           | \-$25.00  |
+|                  | Food          | \-$10.00  |
+| Tuesday          |               |           |
+|                  | Car           | \-$50.00  |
+| Wednesday        |               |           |
+|                  | Birthday Gift | \-$26.00  |
+|                  | Food          | \-$15.00  |
+| Thursday         |               |           |
+|                  | Paycheck      | $400.00   |
+| Friday           |               |           |
+|                  | Movies        | \-$30.00  |
+|                  | Candy         | \-$10.00  |
+| Saturday         |               |           |
+|                  | Groceries     | \-$100.00 |
+| Sunday           |               |           |
+|                  | Video Game    | \-$60.00  |
+| Total            |               | $74.00    |
+|                  |               |           |
+|                  |               |           |
+| Week 1           |               |           | 
 
 This is an example of a data structure that would be fine to use if you're only planning on 1-3 weeks to track expenses. However, how about 2 months, 6 months, 3 years? It becomes harder and harder to find information like "How much am i spending every week on average?" or "How much am I spending on groceries every month?"
 
