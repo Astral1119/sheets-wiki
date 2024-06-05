@@ -5,7 +5,7 @@ description: A guide for using tables to enchance data structure practices
 author: Aliafriend
 date: 2024-06-05T14:29:43.092Z
 ---
-A follow-up from \[Data Structure For Success](https://sheets.wiki/books/advice/taming-spreadsheet-data-structure-for-success/) tables are extremely beneficial for maintaining and enabling good data structure.
+A follow-up from [Data Structure For Success](https://sheets.wiki/books/advice/taming-spreadsheet-data-structure-for-success/) tables are extremely beneficial for maintaining and enabling good data structure.
 
 Using the table below as an example we have a few features.
 
