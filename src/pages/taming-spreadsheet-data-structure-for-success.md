@@ -14,7 +14,7 @@ Proper data structure leads to better data ingestion, smoother experience, and e
 Let's look at an example.
 
 | A                | B             | C         |
-| :----------------: | :-------------: | :---------: | 
+| ---------------- | ------------- | --------- |
 | Week of 4/1/2024 |               |           |
 | Monday           |               |           |
 |                  | Gas           | \-$25.00  |
@@ -36,12 +36,12 @@ Let's look at an example.
 | Total            |               | $74.00    |
 |                  |               |           |
 |                  |               |           |
-| Week 1           |               |           | 
+| Week 1           |               |           |
 
 This is an example of a data structure that would be fine to use if you're only planning on 1-3 weeks to track expenses. However, how about 2 months, 6 months, 3 years? It becomes harder and harder to find information like "How much am i spending every week on average?" or "How much am I spending on groceries every month?"
 
 | A        | B             | C         |
-| :--------: | :-------------: | :---------: |
+| -------- | ------------- | --------- |
 | Day      | Item          | Amount    |
 | 4/1/2024 | Gas           | \-$25.00  |
 | 4/1/2024 | Food          | \-$10.00  |
@@ -84,16 +84,20 @@ This structure allows you to track weeks, months, or years and allows you to eas
 
 Let's take a look at another example.
 
-| A                | B             | C         | D          | E          |
-| :----------------: | :-------------: | :---------: | :----------: | :----------: |
-| PO               |   Customer    | Item      |  Quantity  | Date       |
-| 123456           | ABC Company   |   Water   |   1        | 4/1/2024   |
-| 123456           | ABC Company   |   Meat    |   2        | 4/1/2024   |
-| 123456           | ABC Company   | Vegetables|   2        | 4/1/2024   |
-| 567891           | DEF Company   |   Bread   |   4        | 4/3/2024   |
-| 567891           | DEF Company   |   Salad   |   5        | 4/3/2024   |
-| 234567           | ABC Company   |   Water   |   1        | 4/5/2024   |
+| A      | B           | C          | D        | E        |
+| ------ | ----------- | ---------- | -------- | -------- |
+| PO     | Customer    | Item       | Quantity | Date     |
+| 123456 | ABC Company | Water      | 1        | 4/1/2024 |
+| 123456 | ABC Company | Meat       | 2        | 4/1/2024 |
+| 123456 | ABC Company | Vegetables | 2        | 4/1/2024 |
+| 567891 | DEF Company | Bread      | 4        | 4/3/2024 |
+| 567891 | DEF Company | Salad      | 5        | 4/3/2024 |
+| 234567 | ABC Company | Water      | 1        | 4/5/2024 |
 
 While this might seem like extra work upfront, this structure allows you to easily filter by various criteria, such as specific companies or items, to see how much stock you have on hand, or other important information you may be looking for such as "How much Meat did we buy from ABC company last month?" can be answered with a simple Filter or [query](https://sheets.wiki/pages/query/).
 
 By prioritizing a well-organized structure from the beginning, you'll empower yourself to get the most out of your spreadsheets!
+
+
+
+Further information on techniques for data structure success see [Tables](https://sheets.wiki/books/advice/tables/)
