@@ -30,9 +30,13 @@ instead of False being A1=2 because it's not array enabled and only looks at the
 
 This also helps us with AND()
 ```haskell
-=IF(SORT(AND(A1>{B1;C1;D1},A1<{B2;C2;D2})),"Pass","Warning")
+=IF(SORT(AND(A1>{C1;D1},A1<{B2;C2;D2})),"Pass","Warning")
 ```
-In this situation we need all statements to be True, A1 is greater than B1 and C1 and D1 additionally less than B2 and C2 and D2. But, thankfully we don't have to write A1> and A1< 6 times total making the formula longer and harder to read or adjust. Even more if there's more conditions.
+In this situation we need all statements to be True,
+A1 is greater than C1 and D1 
+As well as
+A1 is less than B2 and C2 and D2.
+But, thankfully we don't have to write A1> and A1< 6 times total making the formula longer and harder to read or adjust. Even more if there's more conditions.
 
 Because it's a range we can also
 
