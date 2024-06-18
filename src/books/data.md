@@ -9,6 +9,6 @@ items:
   - type: page
     page: flookup
   - type: page
-    page: structfix
+    page: structfix-named-function
 ---
 Named Functions in this book focus on data analysis.
