@@ -8,5 +8,7 @@ shelves:
 items:
   - type: page
     page: flookup
+  - type: page
+    page: structfix
 ---
 Named Functions in this book focus on data analysis.
