@@ -2,7 +2,7 @@
 title: LAMBDA Refactoring
 short: LAMBDA Refactoring
 description: Refactoring your formulas using LAMBDA to make it more readable and usable
-author: Aliafriend
+author: Chris Carpenter/AliafriendAliafriend
 date: 2024-05-07T15:48:22.502Z
 ---
 If you haven't already, read [Documenting Formulas](https://sheets.wiki/books/techniques/documenting-formulas/) as this is a continuation of concepts from that blog.
