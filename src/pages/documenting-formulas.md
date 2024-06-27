@@ -1,10 +1,11 @@
 ---
 title: Documenting Formulas
 description: A method of adding documentation/comments to formulas.
-author: Aliafriend
+author: Chris Carpenter/Aliafriend
 date: 2024-04-08T18:03:32.861Z
 tags:
   - advice
+short: Documenting Formulas
 ---
 As sheets doesn't have an official way to comment within formulas yet, we're often wondering how to document our formulas or add comments for our co-workers or our future self to remember what the formula does or even what it's pointing to.
 
