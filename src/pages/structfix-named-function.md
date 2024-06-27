@@ -2,7 +2,7 @@
 title: STRUCTFIX
 short: STRUCTFIX Named Function
 description: Function that fixes a particular type of data structure
-author: Aliafriend
+author: Chris Carpenter/Aliafriend
 date: 2024-06-18T15:23:52.118Z
 ---
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSO3dYwsO1OOjmnLmI0IPMiwfWXxY5n-ynkS0MHvbK34uyzle-RvWGhj0zlIpOC3UWxijpzvXkZViqE/pubhtml?gid=193434782&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
