@@ -2,7 +2,7 @@
 title: Tables
 short: Tables
 description: A guide for using tables to enchance data structure practices
-author: Aliafriend
+author: Chris Carpenter/Aliafriend
 date: 2024-06-05T14:29:43.092Z
 ---
 A follow-up from [Data Structure For Success](https://sheets.wiki/books/advice/taming-spreadsheet-data-structure-for-success/) tables are extremely beneficial for maintaining and enabling good data structure.
