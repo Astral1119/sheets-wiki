@@ -1,7 +1,7 @@
 ---
 title: "Taming Spreadsheet Data: Structure for Success"
 description: Advice on setting up data structures for Google Sheets.
-author: Aliafriend
+author: Chris Carpenter/Aliafriend
 date: 2024-04-02T16:08:05.151Z
 tags:
   - tutorial
