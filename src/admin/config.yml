@@ -18,7 +18,7 @@ backend:
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 media_folder: "src/static/img"
 public_folder: "/static/img"
