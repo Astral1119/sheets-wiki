@@ -1,0 +1,34 @@
+---
+title: Getting the last checkbox that was clicked (Timestamp method)
+short: Last click using timestamps
+description: It's imposible to know which ckeckbox or dropdown was last edited
+  visually using their current state. In this article, I will present a method
+  using timestamps in order to determine when event occured last.
+author: Shay Capehart
+date: 2024-08-25T04:27:23.665Z
+---
+A trigger can come in various forms. When a checkbox is clicked, a dropdown selection is made, a value entered into a cell. A trigger is a cell that changes value, thereby causing any formula that references that cell to recalculate. For the majority of this article, I will use checkboxes as the triggers. 
+
+Let's say that I want to be able to change the color of my sparkline using the five checkboxes shown below.
+
+![](/static/img/last_checkbox_setup.jpg)
+
+To determine which one was last clicked, let's have each of them generate a timestamp whenever they change. To get a static timestamp, I'm using the LAMBDA Update Supression method.
+
+`=LET(t, D9, LAMBDA(x, x)(NOW())`
+
+![](/static/img/last_checkbox_timestamps.jpg)
+
+I've gone ahead and aligned them vertically, because the next thing we need to so is sort, which only works with vertical arrays.  
+
+Since the timestamps are static, and only update when their respective colored checkbox is clicked, then the last checkbox that was clicked should always have the most recent timestamp. Let's sort an index array, using the five timestamps as the array to sort by and sort it in descending order. 
+
+`=SORTN(SEQUENCE(5), 1, , T6:T10, 0)`
+
+![](/static/img/last_checkbox_index.jpg)
+
+You could go further back, but since we are only interested in the last checkbox that was clicked, we only need to return the top result. That gives us the index number we can use in our sparkline formula to change colors.  
+
+Here is the final result.
+
+![](/static/img/last_checkbox_final.gif)
