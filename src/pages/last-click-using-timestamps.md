@@ -3,7 +3,7 @@ title: Getting the last checkbox that was clicked (Timestamp method)
 short: Last click using timestamps
 description: It's imposible to know which ckeckbox or dropdown was last edited
   visually using their current state. In this article, I will present a method
-  using timestamps in order to determine when event occured last.
+  using timestamps in order to determine which event occured last.
 author: Shay Capehart
 date: 2024-08-25T04:27:23.665Z
 ---
