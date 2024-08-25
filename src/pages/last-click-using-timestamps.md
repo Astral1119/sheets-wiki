@@ -13,7 +13,7 @@ Let's say that I want to be able to change the color of my sparkline using the f
 
 ![](/static/img/last_checkbox_setup.jpg "Sparkline setup to change color")
 
-To determine which one was last clicked, let's have each of them generate a timestamp whenever they change. To get a static timestamp, I'm using the LAMBDA Update Supression method.
+To determine which one was last clicked, let's have each of them generate a timestamp whenever they change. To get a static timestamp, I'm using the [LAMBDA Update Supression](https://sheets.wiki/lus/) method.
 
 `=LET(t, D9, LAMBDA(x, x)(NOW())`
 
