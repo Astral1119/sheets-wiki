@@ -12,15 +12,17 @@ path: home
     <p>This site is currently being maintained by Astral. If you would like to contribute or have any questions about this site, please reach out to astral@astral.cafe or at astral.cafe on Discord.</p>
   </article>
   <h1>Writers</h1>
-  {%- for person in collections.people %}
-    <a href="/people/{{ person.data.name | slugify }}">
-      <div class="writercard">
-        <img src="{{ person.data.pfp }}" alt="pfp" style="width:100%">
-        <div class="writercontainer">
-          <h4><b>{{ person.data.name }}</b></h4>
-          <p>{{ person.data.description }}</p>
+  <div class="writergrid">
+    {%- for person in collections.people %}
+      <a href="/people/{{ person.data.name | slugify }}">
+        <div class="writercard">
+          <img src="{{ person.data.pfp }}" alt="pfp" style="width:100%">
+          <div class="writercontainer">
+            <h4><b>{{ person.data.name }}</b></h4>
+            <p>{{ person.data.description }}</p>
+          </div>
         </div>
-      </div>
-    </a>
-  {% endfor -%}
+      </a>
+    {% endfor -%}
+  </div>
 </div>
