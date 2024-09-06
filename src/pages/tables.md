@@ -1,7 +1,7 @@
 ---
 title: Tables
 short: Tables
-description: A guide for using tables to enchance data structure practices
+description: A guide for using tables to enhance data structure practices
 author: Chris Carpenter/Aliafriend
 date: 2024-06-05T14:29:43.092Z
 ---
