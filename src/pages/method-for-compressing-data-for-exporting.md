@@ -9,7 +9,7 @@ Sometimes we have too many cells for things like IMPORTDATA() or IMPORTDATA() ta
 
 Packing the data we will use typically un_used characters such as | and ~ to join each column into a single string, from there we join all of the columns to create a single string that will be our import cell (or import string if you're doing it manually.
 
-`=LAMBDA(columns,JOIN("~",BYCOL(columns,lambda(col,JOIN("|",col)))))(columns`)
+`=LAMBDA(columns,JOIN("~",BYCOL(columns,lambda(col,JOIN("|",col)))))(columns)`
 
 Unpacking the data we will just split in the reverse order that we packed it putting the data in it's original locations therefore bypassing cell limits. It will also increase the speed of the import/export because it's only looking at a single cell for data.
 
