@@ -5,7 +5,7 @@ description: Method for compressing data for exporting
 author: Aliafriend/Chris Carpenter
 date: 2024-10-11T13:24:59.317Z
 ---
-Sometimes we have too many cells for things like IMPORTDATA() or IMPORTDATA() takes awhile to load slowing down our sheet. We can use this method of compressing the data to speed things up or bypass cell limits.
+Sometimes we have too many cells for things like IMPORTRANGE() or IMPORTRANGE() takes awhile to load slowing down our sheet. We can use this method of compressing the data to speed things up or bypass cell limits.
 
 Packing the data we will use typically un_used characters such as | and ~ to join each column into a single string, from there we join all of the columns to create a single string that will be our import cell (or import string if you're doing it manually.
 
