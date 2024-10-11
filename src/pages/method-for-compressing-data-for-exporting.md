@@ -1,5 +1,5 @@
 ---
-title: Pack/Unpack
+title: Pack-Unpack
 short: Method for compressing data for exporting
 description: Method for compressing data for exporting
 author: Aliafriend/Chris Carpenter
