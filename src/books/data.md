@@ -11,6 +11,6 @@ items:
   - type: page
     page: structfix-named-function
   - type: page
-    page: Pack/Unpack
+    page: Pack-Unpack
 ---
 Named Functions in this book focus on data analysis.
