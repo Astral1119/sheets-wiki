@@ -13,6 +13,8 @@ author: Astral
 LAMBDA(volatile, update, volatile)([volatile function], [update condition])
 ```
 
+As of 1/6/25, LUS is no longer functional. Please be aware that the information on this page is no longer relevant. This article is kept for archival purposes only.
+
 [LAMBDA](https://sheets.wiki/pages/lambda/) references only recalculate when a change is detected in a cell referenced by the formula. This property overrides the typical volatile property of updating whenever any cell is updated.
 
 Because LUS is [unstable](https://sheets.wiki/pages/unstable/), typical use cases relate to temporary randomization and dice rolling.
